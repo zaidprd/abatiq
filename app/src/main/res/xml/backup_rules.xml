@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Limit the data that is backed up to user preferences and progress. We do NOT
+   include the TTS engine state — it is restored automatically by Android.
+-->
+<full-backup-content>
+    <include domain="sharedpref" path="abatiq_prefs.xml" />
+    <include domain="database" path="abatiq.db" />
+</full-backup-content>

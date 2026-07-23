@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <!-- Simple geometric gear, no face/character -->
+    <path
+        android:pathData="M16,4 L18,7 L22,6 L23,10 L27,11 L26,15 L29,18 L26,21 L27,25 L23,26 L22,30 L18,29 L16,32 L14,29 L10,30 L9,26 L5,25 L6,21 L3,18 L6,15 L5,11 L9,10 L10,6 L14,7 Z"
+        android:fillColor="#1F4A36" />
+    <path
+        android:pathData="M16,12 m -4,0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0"
+        android:fillColor="#FFF6E4" />
+</vector>

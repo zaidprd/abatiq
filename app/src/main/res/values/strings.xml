@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">AbatiQ</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Assalamu\'alaikum!</string>
+    <string name="home_subtitle">Ayo kita belajar sambil bermain.</string>
+    <string name="home_module_tebak_huruf_title">Tebak Huruf</string>
+    <string name="home_module_tebak_huruf_subtitle">Huruf A sampai J • 60 detik</string>
+    <string name="home_progress_title">Perjalanan belajarmu</string>
+    <string name="home_progress_sessions">Sesi selesai: %1$d</string>
+    <string name="home_progress_best">Skor terbaik: %1$d</string>
+    <string name="home_progress_last">Skor terakhir: %1$d</string>
+    <string name="home_settings_cd">Buka pengaturan orang tua</string>
+    <string name="home_play_cd">Mulai Tebak Huruf</string>
+    <string name="home_audio_idle">AbatiQ siap</string>
+    <string name="home_audio_speaking">Suara sedang berbicara</string>
+    <string name="home_audio_unavailable">Suara tidak tersedia</string>
+
+    <!-- Game -->
+    <string name="game_back_cd">Kembali</string>
+    <string name="game_replay_cd">Ulangi suara huruf</string>
+    <string name="game_score_cd">Skor saat ini</string>
+    <string name="game_timer_cd">Sisa waktu</string>
+
+    <!-- Result -->
+    <string name="result_title">Alhamdulillah, sesi belajar selesai!</string>
+    <string name="result_score_label">Skor kamu</string>
+    <string name="result_correct_taps">Huruf benar: %1$d</string>
+    <string name="result_best_label">Skor terbaik: %1$d</string>
+    <string name="result_play_again">Main Lagi</string>
+    <string name="result_home">Kembali ke Beranda</string>
+
+    <!-- Parental gate / Settings -->
+    <string name="parental_gate_title">Hanya untuk orang tua</string>
+    <string name="parental_gate_subtitle">Selesaikan soal ini untuk membuka pengaturan.</string>
+    <string name="parental_gate_challenge_format">Berapa %1$d ditambah %2$d?</string>
+    <string name="parental_gate_answer_hint">Jawaban</string>
+    <string name="parental_gate_continue">Lanjut</string>
+    <string name="parental_gate_cancel">Batal</string>
+    <string name="parental_gate_wrong">Jawaban belum tepat, soal baru sudah disiapkan.</string>
+
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_volume_label">Volume suara</string>
+    <string name="settings_volume_value">%1$d%%</string>
+    <string name="settings_test_audio">Tes suara</string>
+    <string name="settings_reset_progress">Hapus progres</string>
+    <string name="settings_reset_confirm_title">Hapus semua progres?</string>
+    <string name="settings_reset_confirm_message">Tindakan ini akan menghapus semua sesi dan skor Tebak Huruf dari perangkat ini. Tindakan tidak dapat dibatalkan.</string>
+    <string name="settings_reset_confirm_yes">Hapus</string>
+    <string name="settings_reset_confirm_no">Batal</string>
+    <string name="settings_audio_unavailable">Mesin suara di perangkat ini belum siap.</string>
+    <string name="settings_reset_done">Progres sudah dihapus.</string>
+
+    <!-- Generic -->
+    <string name="content_desc_decoration">Dekorasi</string>
+    <string name="content_desc_close">Tutup</string>
+</resources>

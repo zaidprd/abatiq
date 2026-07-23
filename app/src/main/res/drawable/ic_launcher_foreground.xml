@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Faceless launcher mark: an Islamic arch (mihrab) with a star inside, all
+    geometry. No faces, no characters, no raster.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Mihrab arch -->
+    <path
+        android:pathData="M30,82 L30,52 C30,39 39,28 54,28 C69,28 78,39 78,52 L78,82 Z"
+        android:fillColor="#1F4A36"
+        android:strokeColor="#163626"
+        android:strokeWidth="1" />
+
+    <!-- Inner arch -->
+    <path
+        android:pathData="M40,82 L40,56 C40,46 46,38 54,38 C62,38 68,46 68,56 L68,82 Z"
+        android:fillColor="#C9E2C2" />
+
+    <!-- Honey star -->
+    <path
+        android:pathData="M54,52 L57.18,60.18 L66,61 L59.5,66.5 L61.36,75 L54,70.5 L46.64,75 L48.5,66.5 L42,61 L50.82,60.18 Z"
+        android:fillColor="#E6B73A"
+        android:strokeColor="#163626"
+        android:strokeWidth="0.6" />
+
+</vector>

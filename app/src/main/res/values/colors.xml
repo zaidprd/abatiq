@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cream">#FFF6E4</color>
+    <color name="cream_dim">#F4E6CC</color>
+    <color name="forest">#1F4A36</color>
+    <color name="forest_dark">#163626</color>
+    <color name="terracotta">#C4644A</color>
+    <color name="terracotta_soft">#E9A98E</color>
+    <color name="honey">#E6B73A</color>
+    <color name="mint">#C9E2C2</color>
+    <color name="mint_surface">#E4EFD9</color>
+    <color name="ink">#1F1B16</color>
+    <color name="ink_soft">#3A332A</color>
+    <color name="paper">#FFFBF1</color>
+</resources>
