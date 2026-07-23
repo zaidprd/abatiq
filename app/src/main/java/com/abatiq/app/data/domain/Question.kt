@@ -6,7 +6,7 @@ package com.abatiq.app.data.domain
  * alphabet subset itself is the A..J constant the brief mandates.
  *
  * Kept as a data class so legacy references compile and as a documented home
- * for the alphabet constant that [GameSession] and [BalloonField] share.
+ * for the alphabet constant that [GameSession] and [LetterBatchFactory] share.
  */
 data class Question(
     val id: String,

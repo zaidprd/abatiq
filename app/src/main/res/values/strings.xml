@@ -5,7 +5,7 @@
     <string name="home_greeting">Assalamu\'alaikum!</string>
     <string name="home_subtitle">Ayo kita belajar sambil bermain.</string>
     <string name="home_module_tebak_huruf_title">Tebak Huruf</string>
-    <string name="home_module_tebak_huruf_subtitle">Huruf A sampai J • 60 detik</string>
+    <string name="home_module_tebak_huruf_subtitle">Huruf A sampai J • 2 menit</string>
     <string name="home_progress_title">Perjalanan belajarmu</string>
     <string name="home_progress_sessions">Sesi selesai: %1$d</string>
     <string name="home_progress_best">Skor terbaik: %1$d</string>
@@ -21,6 +21,8 @@
     <string name="game_replay_cd">Ulangi suara huruf</string>
     <string name="game_score_cd">Skor saat ini</string>
     <string name="game_timer_cd">Sisa waktu</string>
+    <string name="game_footer_listen">Dengarkan instruksi, lalu pilih huruf yang tepat</string>
+    <string name="game_footer_no_audio">Suara belum siap, ketuk tombol speaker untuk mencoba lagi</string>
 
     <!-- Result -->
     <string name="result_title">Alhamdulillah, sesi belajar selesai!</string>

@@ -1,26 +1,27 @@
 package com.abatiq.app.domain
 
-import com.abatiq.app.data.domain.BalloonField
 import com.abatiq.app.data.domain.GameSession
+import com.abatiq.app.data.domain.LetterBatchFactory
 import com.abatiq.app.data.domain.Question
 import kotlin.random.Random
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class TimedBalloonGameTest {
 
     @Test
-    fun `session lasts sixty seconds`() {
+    fun `session lasts two minutes by default`() {
         var now = 1_000L
         val session = GameSession(random = Random(1), clock = { now })
 
-        assertEquals(60, session.durationSeconds)
-        assertEquals(60, session.remainingSeconds(now))
+        assertEquals(120, session.durationSeconds)
+        assertEquals(120, session.remainingSeconds(now))
 
-        now += 59_001L
+        now += 119_001L
         assertEquals(1, session.remainingSeconds(now))
 
         now += 999L
@@ -32,7 +33,7 @@ class TimedBalloonGameTest {
         val session = GameSession(random = Random(2), clock = { 10L })
         val target = session.targetLetter
 
-        val result = session.tap(target, listOf("B", "C", "D"))
+        val result = session.tap(target, listOf("B", "C", target))
 
         assertTrue(result.isCorrect)
         assertEquals(10, result.pointsAwarded)
@@ -59,27 +60,20 @@ class TimedBalloonGameTest {
     }
 
     @Test
-    fun `three-letter batch stays until tap then all three are replaced`() {
-        val field = BalloonField(random = Random(4))
-        field.updateMetrics(widthPx = 216f, heightPx = 264f)
-        field.populate(targetLetter = "G", fieldWidth = 1080f, fieldHeight = 1600f)
+    fun `letter batch always contains the requested target`() {
+        val factory = LetterBatchFactory(random = Random(4))
 
-        assertEquals(3, field.balloons.size)
-        assertEquals(3, field.balloons.map { it.letter }.distinct().size)
-        assertTrue(field.balloons.all { it.letter in Question.Letters })
-        assertTrue(field.balloons.any { it.letter == "G" })
-        assertTrue(field.balloons.maxOf { it.topY } - field.balloons.minOf { it.topY } < 100f)
-
-        val originalIds = field.balloons.map { it.id }
-        repeat(300) { field.step(0.1f) }
-        assertEquals(originalIds, field.balloons.map { it.id })
-        assertEquals(3, field.balloons.size)
-
-        field.replaceBatchAfterTap(fieldHeight = 1600f)
-
-        assertEquals(3, field.balloons.size)
-        assertEquals(0, field.balloons.count { it.id in originalIds })
-        assertEquals(3, field.balloons.map { it.letter }.distinct().size)
-        assertTrue(field.balloons.all { it.letter in Question.Letters })
+        repeat(20) {
+            val target = Question.Letters.random()
+            val batch = factory.nextBatch(target)
+            assertEquals(LetterBatchFactory.ROUND_SIZE, batch.size)
+            assertTrue(batch.any { it.letter == target })
+            assertEquals(batch.size, batch.map { it.letter }.distinct().size)
+            assertEquals((0 until batch.size).toList(), batch.map { it.revealIndex })
+            batch.forEach { card ->
+                assertNotNull(card.id)
+                assertFalse(card.isRevealed)
+            }
+        }
     }
 }

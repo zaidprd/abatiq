@@ -3,7 +3,7 @@ package com.abatiq.app.data.domain
 import kotlin.random.Random
 
 /**
- * The small set of rules that govern one 60-second play session. Pulled out of
+ * The small set of rules that govern one 120-second play session. Pulled out of
  * the ViewModel so the test suite can drive it without any Android dependency.
  *
  * Responsibilities:
@@ -50,12 +50,15 @@ class GameSession(
     }
 
     /**
-     * Apply a tap after the UI has replaced the chosen slot. The next target is
-     * selected only from [nextTargetCandidates], which must be the three letters
-     * currently visible on screen.
+     * Apply a tap once the UI has prepared the next round. The next target is
+     * chosen from [nextTargetCandidates], which must contain the three letters
+     * that will appear in the next batch.
      */
     fun tap(letter: String, nextTargetCandidates: List<String>): TapOutcome {
         require(nextTargetCandidates.isNotEmpty()) { "Target berikutnya harus terlihat di layar" }
+        require(nextTargetCandidates.size == ROUND_SIZE) {
+            "Setiap ronde menampilkan tepat $ROUND_SIZE huruf"
+        }
         _totalTaps += 1
         val previousTarget = _targetLetter
         val isCorrect = letter == previousTarget
@@ -64,8 +67,9 @@ class GameSession(
             _score += points
             _correctTaps += 1
         }
-        val preferredTargets = nextTargetCandidates.distinct().filter { it != previousTarget }
-        val targetPool = preferredTargets.ifEmpty { nextTargetCandidates.distinct() }
+        val distinctCandidates = nextTargetCandidates.distinct()
+        val preferredTargets = distinctCandidates.filter { it != previousTarget }
+        val targetPool = preferredTargets.ifEmpty { distinctCandidates }
         _targetLetter = targetPool[random.nextInt(targetPool.size)]
         return TapOutcome(
             previousTarget = previousTarget,
@@ -129,10 +133,13 @@ class GameSession(
     )
 
     companion object {
-        /** Owner-approved session length. */
-        const val DEFAULT_DURATION_SECONDS = 60
+        /** Owner-approved session length — two minutes per round. */
+        const val DEFAULT_DURATION_SECONDS = 120
 
         /** Owner-approved scoring rule. */
         const val POINTS_PER_CORRECT = 10
+
+        /** Exactly three letter cards are visible per round. */
+        const val ROUND_SIZE = 3
     }
 }

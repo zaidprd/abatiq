@@ -6,8 +6,10 @@ import com.abatiq.app.audio.GameAudioPlayer
 import com.abatiq.app.audio.GamePrompt
 import com.abatiq.app.audio.PlaybackState
 import com.abatiq.app.data.domain.Attempt
-import com.abatiq.app.data.domain.BalloonField
 import com.abatiq.app.data.domain.GameSession
+import com.abatiq.app.data.domain.LetterBatchFactory
+import com.abatiq.app.data.domain.LetterCard
+import com.abatiq.app.data.domain.LetterCardFeedback
 import com.abatiq.app.data.repository.GameRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -19,17 +21,15 @@ import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 /**
- * Owns the 60-second floating-balloon session. Drives the countdown timer and
- * the field simulation, dispatches every tap through [GameSession] for the
- * scoring rules, and hands a single [GameUiState] to the renderer.
+ * Drives a two-minute "Tebak Huruf" session.
  *
- * Tap rules (owner-approved Phase 1 brief):
- *   - Correct tap → +10 score, a short positive spoken line, the next target
- *     letter is chosen immediately, and that new target is spoken.
- *   - Wrong tap → 0 score, a short gentle spoken line, the next target letter
- *     is chosen immediately, and that new target is spoken.
- *   - The background field never pauses — balloons keep rising.
- *   - When the timer reaches 0 the session is finalised and [result] is emitted.
+ * Round flow:
+ *  1. The screen asks for an initial batch from [GameSession.targetLetter].
+ *  2. The renderer reveals the three cards with a short stagger.
+ *  3. When the child taps a card we lock further input, play a reaction on the
+ *     tapped card (zoom for correct, shake for gentle), then create the next
+ *     batch and start the stagger again.
+ *  4. The countdown timer runs from [GameSession.DEFAULT_DURATION_SECONDS].
  */
 class GameViewModel(
     private val gameRepository: GameRepository,
@@ -38,12 +38,17 @@ class GameViewModel(
     private val clock: () -> Long = { System.currentTimeMillis() },
     /** Granularity of the visible countdown in milliseconds. */
     private val tickIntervalMillis: Long = 100L,
-    /** Default play area used until the screen reports its measured size. */
-    initialPlayArea: PlayArea = PlayArea.Placeholder,
+    /** Visible duration of the reaction animation before the next batch appears. */
+    private val reactionHoldMillis: Long = 700L,
+    /** Delay between consecutive card reveals inside the same round. */
+    private val cardStaggerMillis: Long = 140L,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(
-        GameUiState(remainingSeconds = GameSession.DEFAULT_DURATION_SECONDS),
+        GameUiState(
+            sessionDurationSeconds = GameSession.DEFAULT_DURATION_SECONDS,
+            remainingSeconds = GameSession.DEFAULT_DURATION_SECONDS,
+        ),
     )
     val state: StateFlow<GameUiState> = _state.asStateFlow()
 
@@ -51,12 +56,9 @@ class GameViewModel(
     val result: StateFlow<GameResult?> = _result.asStateFlow()
 
     private var session: GameSession? = null
-    private val field: BalloonField = BalloonField(random = random)
-    private var area: PlayArea = initialPlayArea
-
+    private val batchFactory = LetterBatchFactory(random = random)
+    private var roundJob: Job? = null
     private var timerJob: Job? = null
-    private var populated: Boolean = false
-    private var areaMeasured: Boolean = false
 
     init {
         viewModelScope.launch {
@@ -65,17 +67,18 @@ class GameViewModel(
             _state.update {
                 it.copy(
                     targetLetter = handle.session.targetLetter,
+                    sessionDurationSeconds = handle.session.durationSeconds,
                     remainingSeconds = handle.session.durationSeconds,
                     isCompleted = false,
                     score = 0,
                     correctTaps = 0,
                     totalTaps = 0,
+                    cards = emptyList(),
                 )
             }
-            populateFieldIfReady()
-            // Speak the first target as soon as the audio engine is ready.
             audioPlayer.play(GamePrompt.TargetLetter(handle.session.targetLetter))
             startTimer()
+            startRound(target = handle.session.targetLetter)
         }
         viewModelScope.launch {
             audioPlayer.state.collect { playback ->
@@ -91,36 +94,70 @@ class GameViewModel(
     }
 
     /**
-     * Called by the Composable once the play area has been measured. Spawns
-     * the initial balloon field with the current target letter on screen.
+     * Start a fresh round: prepare a new batch and reveal the cards one by one
+     * with a stagger so each card "appears" individually.
      */
-    fun setPlayArea(area: PlayArea) {
-        if (area == PlayArea.Placeholder) return
-        this.area = area
-        areaMeasured = true
-        field.updateMetrics(area.balloonWidthPx, area.balloonHeightPx)
-        populateFieldIfReady()
+    private fun startRound(target: String) {
+        roundJob?.cancel()
+        roundJob = viewModelScope.launch {
+            val batch = batchFactory.nextBatch(target)
+            _state.update {
+                it.copy(
+                    cards = batch.map { card -> card.copy(isRevealed = false) },
+                    reactingCardId = null,
+                    reactingFeedback = LetterCardFeedback.None,
+                )
+            }
+            batch.forEachIndexed { index, card ->
+                if (index > 0) delay(cardStaggerMillis)
+                revealCard(card.id)
+            }
+        }
     }
 
-    private fun populateFieldIfReady() {
-        val current = session ?: return
-        if (!areaMeasured || populated) return
-        populated = true
-        field.populate(current.targetLetter, area.width, area.height)
-        _state.update { it.copy(balloons = field.balloons.toList()) }
+    private suspend fun revealCard(cardId: Long) {
+        _state.update { current ->
+            current.copy(
+                cards = current.cards.map { card ->
+                    if (card.id == cardId) card.copy(isRevealed = true) else card
+                },
+            )
+        }
     }
 
     /**
-     * Tap was registered on the balloon with the given [id] and [letter].
+     * Handle a tap on one of the visible cards. Locks further input while the
+     * reaction animation runs.
      */
-    fun onBalloonTapped(id: Long, letter: String) {
+    fun onCardTapped(letter: String) {
         val current = session ?: return
         if (_state.value.isCompleted) return
+        if (_state.value.reactingCardId != null) return // input locked
+        val card = _state.value.cards.firstOrNull { it.letter == letter } ?: return
+
         val previousTarget = current.targetLetter
         val isCorrect = letter == previousTarget
-        if (field.balloons.none { it.id == id }) return
-        field.replaceBatchAfterTap(fieldHeight = area.height)
-        val outcome = current.tap(letter, field.visibleLetters)
+
+        // Lock input and surface the reaction on the tapped card.
+        _state.update {
+            it.copy(
+                reactingCardId = card.id,
+                reactingFeedback = if (isCorrect) {
+                    LetterCardFeedback.Correct
+                } else {
+                    LetterCardFeedback.Gentle
+                },
+            )
+        }
+
+        // We commit the tap and prepare the next round with the outcome the
+        // engine returns. The engine's next target must come from the next
+        // batch, so we ask it for the outcome by generating that batch first.
+        val nextBatch = batchFactory.nextBatch(
+            targetLetter = placeholderNextTarget(current, letter),
+        )
+        val outcome = current.tap(letter, nextBatch.map { it.letter })
+
         viewModelScope.launch {
             gameRepository.recordAttempt(
                 Attempt(
@@ -133,47 +170,55 @@ class GameViewModel(
                 )
             )
         }
-        _state.update {
-            it.copy(
-                balloons = field.balloons.toList(),
-                targetLetter = outcome.nextTarget,
-                score = current.score,
-                correctTaps = current.correctTaps,
-                totalTaps = current.totalTaps,
-                feedbackPulse = if (isCorrect) {
-                    com.abatiq.app.data.domain.FeedbackPulse.Correct
-                } else {
-                    com.abatiq.app.data.domain.FeedbackPulse.Gentle
-                },
-                pulsedBalloonId = null,
-            )
-        }
-        // The newest target is the most important audio cue. Feedback remains
-        // visual so it never delays or overwrites the next instruction.
+
         audioPlayer.play(
-            if (outcome.isCorrect) {
+            if (isCorrect) {
                 GamePrompt.CorrectThenTarget(outcome.nextTarget)
             } else {
                 GamePrompt.GentleThenTarget(outcome.nextTarget)
             },
         )
+
+        // Hold the reaction long enough for the child to perceive it, then
+        // refresh the round with the next batch.
+        viewModelScope.launch {
+            delay(reactionHoldMillis)
+            if (_state.value.isCompleted) return@launch
+            _state.update {
+                it.copy(
+                    score = current.score,
+                    correctTaps = current.correctTaps,
+                    totalTaps = current.totalTaps,
+                    cards = emptyList(),
+                    targetLetter = outcome.nextTarget,
+                    reactingCardId = null,
+                    reactingFeedback = LetterCardFeedback.None,
+                    roundToken = it.roundToken + 1,
+                )
+            }
+            startRound(target = outcome.nextTarget)
+        }
+    }
+
+    /**
+     * Provide a deterministic placeholder target for [LetterBatchFactory] so the
+     * engine can pick its real next target from a fresh batch. We pass the
+     * previous target because the factory guarantees it is included, but the
+     * result is purely a vehicle for the outcome — we immediately overwrite the
+     * target with the real one returned by the engine.
+     */
+    private fun placeholderNextTarget(session: GameSession, tappedLetter: String): String {
+        // Prefer the engine's own next-target hint when available by passing
+        // the previous target; this is only consumed to generate a valid batch.
+        return session.targetLetter
     }
 
     /** Replay the current target letter through the audio abstraction. */
     fun replayTarget() {
         val target = _state.value.targetLetter
-        if (target.isNotEmpty()) {
+        if (target.isNotEmpty() && _state.value.reactingCardId == null) {
             audioPlayer.play(GamePrompt.TargetLetter(target))
         }
-    }
-
-    /** Called by the Composable each frame to advance the simulation. */
-    fun onFrame(deltaSeconds: Float) {
-        if (_state.value.isCompleted) return
-        val current = session ?: return
-        if (!populated) return
-        field.step(deltaSeconds)
-        _state.update { it.copy(balloons = field.balloons.toList()) }
     }
 
     private fun startTimer() {
@@ -195,6 +240,7 @@ class GameViewModel(
 
     private fun finalizeSession() {
         val current = session ?: return
+        roundJob?.cancel()
         val summary = current.end()
         viewModelScope.launch {
             gameRepository.completeSession(summary)
@@ -205,6 +251,8 @@ class GameViewModel(
                     score = summary.finalScore,
                     correctTaps = summary.correctTaps,
                     totalTaps = summary.totalTaps,
+                    reactingCardId = null,
+                    reactingFeedback = LetterCardFeedback.None,
                 )
             }
             _result.value = GameResult(
@@ -219,19 +267,7 @@ class GameViewModel(
     override fun onCleared() {
         super.onCleared()
         timerJob?.cancel()
+        roundJob?.cancel()
         audioPlayer.stop()
-    }
-
-    /** Composable-provided play area dimensions in pixels. */
-    data class PlayArea(
-        val width: Float,
-        val height: Float,
-        val balloonWidthPx: Float = 200f,
-        val balloonHeightPx: Float = 240f,
-    ) {
-        companion object {
-            /** Used between init and the first layout pass. */
-            val Placeholder = PlayArea(width = 1080f, height = 1920f)
-        }
     }
 }

@@ -77,7 +77,7 @@ Seluruh modul di bawah ini **dicatat sebagai backlog produk penuh**, disusun ula
 ### 5.2 Kategori "Bermain" (Game dengan skor/timer)
 | # | Modul | Deskripsi Singkat | Catatan Adaptasi |
 |---|---|---|---|
-| 1 | **Tebak Huruf** | Dengar audio target, pilih huruf A–J pada balon yang terus melayang selama 60 detik | **→ FASE 1 (lihat Bab 6)** |
+| 1 | **Tebak Huruf** | Dengar audio target, pilih huruf A–J dari tiga kartu besar berjajar (landscape) selama 120 detik | **→ FASE 1 (lihat Bab 6)** |
 | 2 | Cocokkan Huruf Besar & Kecil | Mencocokkan pasangan huruf | Fase 2 |
 | 3 | Tebak Bacaan | Dengar kata, pilih gambar yang sesuai | Fase 2 |
 | 4 | Tebak Balon Angka | Tebak angka dari balon | Fase 2 |
@@ -112,19 +112,19 @@ Melatih anak mengenali bentuk huruf (Latin A–Z dan/atau Hijaiyah, dikonfirmasi
 
 ### 6.3 Alur Permainan (Game Flow)
 
-> **Keputusan pemilik produk (revisi 23 Juli 2026):** spesifikasi di bagian ini menggantikan konsep awal tiga kartu, maksimal dua percobaan, dan sesi 5–10 soal. Fase 1 menggunakan permainan balon huruf berbasis waktu selama 60 detik.
+> **Keputusan pemilik produk (revisi 23 Juli 2026):** spesifikasi di bagian ini menggantikan konsep awal tiga kartu, maksimal dua percobaan, dan sesi 5–10 soal. Fase 1 menggunakan permainan kartu huruf berbasis waktu selama 120 detik, dengan orientasi landscape.
 
-1. **Layar Mulai Modul** — Anak menekan modul "Tebak Huruf" dari menu utama.
+1. **Layar Mulai Modul** — Anak menekan modul "Tebak Huruf" dari menu utama. Begitu navigasi terjadi, aplikasi mengunci orientasi ke landscape agar arena kartu mendapat ruang horizontal penuh.
 2. **Instruksi Audio Otomatis** — Begitu sesi dimulai, sistem menyebutkan huruf target dalam Bahasa Indonesia. Tidak ada teks pertanyaan di layar permainan karena pengalaman harus dapat digunakan anak yang belum bisa membaca.
-3. **Arena Balon Huruf** — Tepat tiga balon huruf kapital A–J muncul hampir sejajar dan bergerak perlahan ke atas. Selama anak belum memilih salah satunya, tidak ada huruf baru yang muncul. Jika mencapai batas atas, tiga huruf tersebut menunggu dan tetap dapat dipilih.
-4. **Interaksi Anak** — Anak mendengarkan target lalu menekan salah satu balon. Tombol speaker selalu tersedia untuk mengulang suara target.
+3. **Arena Kartu Huruf** — Tepat tiga kartu huruf kapital A–J besar muncul berjajar dalam bingkai dan masuk bergilir cepat sejak awal ronde. Saat menunggu tap anak, kartu tetap diam di tempat. Tidak ada huruf tambahan yang muncul selama ronde berjalan.
+4. **Interaksi Anak** — Anak mendengarkan target lalu menekan salah satu kartu. Tombol speaker di top bar selalu tersedia untuk mengulang suara target.
 5. **Evaluasi Jawaban dan kelanjutan permainan:**
-   - **Jika benar:** balon mendapat indikator visual positif, skor bertambah **10 poin**, sistem langsung memilih dan menyebutkan target berikutnya, lalu permainan terus berjalan.
-   - **Jika belum tepat:** balon mendapat indikator visual lembut, skor tidak bertambah dan tidak berkurang, sistem tetap langsung memilih dan menyebutkan target berikutnya. Tidak ada retry, reveal, atau jeda yang menghentikan aliran permainan.
-   - Pada kedua hasil, tap menyelesaikan ronde: ketiga huruf lama langsung hilang bersama dan diganti satu kelompok baru berisi tepat tiga huruf A–J acak dari bawah. Tidak ada huruf dari ronde lama dan baru yang tampil bersamaan.
-   - Selama anak belum memilih salah satu huruf pada ronde aktif, kelompok berikutnya tidak boleh dibuat atau ditampilkan.
+   - **Jika benar:** kartu mendapat reaksi *zoom pulse* singkat dan border berubah menjadi hijau forest, skor bertambah **10 poin**, sistem langsung memilih dan menyebutkan target berikutnya, lalu permainan terus berjalan.
+   - **Jika belum tepat:** kartu bergetar pelan ke kiri-kanan dengan border terracotta, skor tidak bertambah dan tidak berkurang, sistem tetap langsung memilih dan menyebutkan target berikutnya. Tidak ada retry, reveal, atau jeda yang menghentikan aliran permainan.
+   - Pada kedua hasil, input dikunci sesaat selama animasi reaksi (~700 ms) agar anak tidak melakukan tap ganda. Setelah itu tiga kartu ronde lama hilang bersama dan diganti satu kelompok baru berisi tepat tiga huruf A–J acak yang masuk bergilir.
+   - Selama anak belum memilih salah satu kartu pada ronde aktif, kelompok berikutnya tidak dibuat atau ditampilkan.
    - Baik jawaban benar maupun belum tepat dicatat sebagai attempt lokal untuk ringkasan progres.
-6. **Durasi dan akhir sesi** — Sesi berlangsung tepat **60 detik**, bukan berdasarkan jumlah soal. Saat waktu habis, arena berhenti dan layar ringkasan menampilkan skor akhir, jumlah tap benar, skor terbaik, serta audio penutup: *"Alhamdulillah, sesi belajar selesai!"*
+6. **Durasi dan akhir sesi** — Sesi berlangsung tepat **120 detik (2 menit)**, bukan berdasarkan jumlah soal. Saat waktu habis, arena berhenti dan layar ringkasan menampilkan skor akhir, jumlah tap benar, skor terbaik, serta audio penutup: *"Alhamdulillah, sesi belajar selesai!"*
 7. **Aturan skor** — Jawaban benar bernilai `+10`; jawaban belum tepat bernilai `0`; tidak ada pengurangan skor dan tidak ada batas skor maksimum selain durasi sesi.
 
 ### 6.4 Prinsip Copywriting Audio Feedback
@@ -140,31 +140,32 @@ Melatih anak mengenali bentuk huruf (Latin A–Z dan/atau Hijaiyah, dikonfirmasi
 
 ### 6.6 Wireframe (Deskripsi Layar)
 ```text
-┌─────────────────────────────────────┐
-│ [Kembali]      48 dtk    ★ 120   🔊 │
-│                                     │
-│      (ornamen geometris tipis)      │
-│       ◯ A      ◯ D      ◯ J         │
-│                                     │
-│                                     │
-│                                     │
-│                                     │
-│       (bukit/daun dekoratif)        │
-└─────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│ [Kembali]            ★ 120          48 dtk ▰▰▰▰▱         🔊            │
+│                                                                          │
+│  ┌────────────┐    ┌────────────┐    ┌────────────┐                       │
+│  │   bingkai  │    │   bingkai  │    │   bingkai  │                       │
+│  │     A      │    │     D      │    │     J      │                       │
+│  └────────────┘    └────────────┘    └────────────┘                       │
+│       (bukit/daun dekoratif)                                             │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
-- Area permainan didominasi latar kosong berwarna hangat agar balon mudah dilacak.
-- Ornamen geometris, botani, lengkung, bintang, titik, dan bukit hanya ditempatkan di tepi serta tidak menghalangi balon.
-- Balon dibuat dari shape/Canvas Compose: warna bulat, huruf besar, dan tali sederhana; tanpa wajah atau ilustrasi makhluk bernyawa.
-- Tidak ada teks pertanyaan pada layar inti. Top bar hanya berisi navigasi, timer, skor, dan tombol speaker.
+- Area permainan didominasi latar kosong berwarna hangat agar kartu mudah dilacak.
+- Ornamen geometris, botani, lengkung, bintang, titik, dan bukit hanya ditempatkan di tepi serta tidak menghalangi kartu.
+- Kartu dibuat dari shape Compose: bingkai tebal berlapis, huruf besar, dan tanpa wajah atau ilustrasi makhluk bernyawa.
+- Tidak ada teks pertanyaan pada layar inti. Top bar hanya berisi navigasi, skor, timer, dan tombol speaker.
 - Tombol speaker wajib ada agar anak bisa memutar ulang instruksi kapan saja.
+- Reaksi kartu: benar → zoom pulse; belum tepat → goyang horizontal singkat.
+- Orientasi terkunci ke landscape selama layar game aktif; Beranda/Hasil tetap mendukung portrait.
 
 ### 6.7 Keputusan Scope Fase 1
 1. Huruf: **Latin kapital A–J**.
 2. Bahasa instruksi: **Bahasa Indonesia**.
 3. Pengguna: **single-user local progress**, tanpa akun atau multi-profil.
 4. Target usia: **3–6 tahun**, dengan UI audio-first dan target sentuh besar.
-5. Audio development: Android Text-to-Speech boleh digunakan sementara. Untuk rilis, pemilik produk akan menggantinya dengan rekaman suara sendiri melalui abstraksi audio yang sama.
-6. Aset visual: tidak membutuhkan SVG eksternal untuk MVP karena balon dan ornamen dapat digambar menggunakan Compose Canvas/vector shapes. Jika kelak membutuhkan ilustrasi kompleks, lisensi dan compliance wajib direview lebih dahulu.
+5. Orientasi: **landscape terkunci selama modul Tebak Huruf aktif**; Beranda, Hasil, dan Pengaturan tetap mendukung portrait/landscape bebas.
+6. Audio development: Android Text-to-Speech boleh digunakan sementara. Untuk rilis, pemilik produk akan menggantinya dengan rekaman suara sendiri melalui abstraksi audio yang sama.
+7. Aset visual: tidak membutuhkan SVG eksternal untuk MVP karena kartu dan ornamen dapat digambar menggunakan Compose Canvas/vector shapes. Jika kelak membutuhkan ilustrasi kompleks, lisensi dan compliance wajib direview lebih dahulu.
 
 ---
 

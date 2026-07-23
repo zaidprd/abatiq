@@ -6,16 +6,14 @@ Spesifikasi utama ada di [`PRD_Aplikasi_Belajar_Anak_Muslim.md`](PRD_Aplikasi_Be
 
 ## Gameplay Fase 1
 
-- Satu sesi berlangsung **60 detik**, bukan berdasarkan jumlah soal.
-- Tepat **tiga** balon huruf A–J muncul hampir sejajar dan bergerak pelan ke atas.
+- Satu sesi berlangsung **2 menit (120 detik)**, bukan berdasarkan jumlah soal.
+- Tepat **tiga** kartu huruf A–J besar berjajar dalam bingkai; kartu muncul bergilir cepat sejak ronde dimulai.
+- Aplikasi otomatis mengunci orientasi ke **landscape** selama permainan; Beranda/Hasil tetap mendukung portrait.
 - Instruksi disampaikan melalui suara; layar permainan **tidak menampilkan teks pertanyaan**.
 - Tombol speaker dapat mengulang target saat ini.
-- Tap huruf benar memberi **+10 poin**.
-- Tap huruf belum tepat memberi **0 poin**, tanpa pengurangan skor.
-- Benar maupun belum tepat langsung berganti ke target berikutnya; tidak ada retry, reveal, atau jeda yang menghentikan permainan.
-- Sebelum anak memilih salah satunya, tidak ada huruf baru yang muncul; tiga huruf hanya bergerak lalu menunggu di batas atas.
-- Setelah satu huruf ditekan, ketiga huruf ronde lama hilang bersama dan diganti satu kelompok baru berisi tepat tiga huruf acak dari bawah.
-- Batch lama dan batch baru tidak pernah tampil bersamaan; batch baru tidak dibuat sebelum anak memilih ronde aktif.
+- Tap huruf benar memberi **+10 poin** dan kartu bereaksi dengan *zoom pulse* singkat.
+- Tap huruf belum tepat memberi **0 poin**, kartu bergetar pelan ke kiri-kanan; tidak ada pengurangan skor.
+- Benar maupun belum tepat mengunci input sejenak, lalu ronde baru muncul dengan tiga huruf acak baru.
 - Hasil sesi dan setiap tap disimpan secara lokal.
 
 ## Tampilan
@@ -44,7 +42,7 @@ Struktur utama:
 ```text
 app/src/main/java/com/abatiq/app/
 ├── audio/                 # GameAudioPlayer, prompt, implementasi TTS
-├── data/domain/           # GameSession dan simulasi BalloonField
+├── data/domain/           # GameSession dan LetterBatchFactory (3 huruf/round)
 ├── data/local/            # Room dan DataStore
 ├── data/repository/       # akses data melalui repository
 └── ui/                    # home, game, result, settings, theme
@@ -107,12 +105,11 @@ Atau buka proyek di Android Studio, pilih perangkat fisik pada device selector, 
 
 ## Test yang tersedia
 
-- durasi sesi tepat 60 detik;
+- durasi sesi tepat 120 detik;
 - jawaban benar memberi +10;
 - jawaban belum tepat tidak mengurangi skor;
-- kedua hasil langsung mengganti target;
-- field tetap tiga huruf dan tidak spawn sebelum tap;
-- satu tap mengganti seluruh batch lama dengan tepat tiga huruf baru;
+- setiap batch berisi tepat tiga huruf A–J dengan target yang selalu muncul;
+- reaksi benar/salah dikunci sebelum ronde berikutnya muncul;
 - parental gate memvalidasi penjumlahan.
 
 ## Kontrol konten
