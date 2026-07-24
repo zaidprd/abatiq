@@ -2,19 +2,16 @@ package com.abatiq.app.ui.game
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -37,7 +34,6 @@ import androidx.compose.material.icons.automirrored.rounded.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -45,9 +41,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -57,10 +57,9 @@ import com.abatiq.app.R
 import com.abatiq.app.data.domain.LetterCard
 import com.abatiq.app.data.domain.LetterCardFeedback
 import com.abatiq.app.ui.components.AbatiQIconButton
-import com.abatiq.app.ui.components.GardenBackdrop
+import com.abatiq.app.ui.components.BalloonView
+import com.abatiq.app.ui.components.PlaceholderBalloon
 import com.abatiq.app.ui.theme.AbatiQColors
-import kotlin.math.PI
-import kotlin.math.sin
 
 /**
  * Landscape "Tebak Huruf" playfield.
@@ -94,7 +93,42 @@ fun GameScreen(
             .fillMaxSize()
             .background(AbatiQColors.Cream),
     ) {
-        GardenBackdrop(accentSeed = 2)
+        // 1. Raster background (TK classroom scene, project-owner Canva artwork)
+        Image(
+            painter = painterResource(R.drawable.ic_background_tebak_huruf_konversi),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
+        )
+        // 2. Soft cream radial scrim brightens the centre so the balloons stay focal
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    brush = Brush.radialGradient(
+                        colors = listOf(
+                            AbatiQColors.Cream.copy(alpha = 0.55f),
+                            AbatiQColors.Cream.copy(alpha = 0.25f),
+                            AbatiQColors.Cream.copy(alpha = 0.0f),
+                        ),
+                        radius = 1400f,
+                    ),
+                ),
+        )
+        // 3. Subtle top-bar scrim so icons stay legible over the mural side
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(96.dp)
+                .background(
+                    brush = Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Black.copy(alpha = 0.12f),
+                            Color.Black.copy(alpha = 0.0f),
+                        ),
+                    ),
+                ),
+        )
 
         Column(
             modifier = Modifier
@@ -125,11 +159,6 @@ fun GameScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f, fill = true),
-            )
-
-            GameFooter(
-                targetLetter = state.targetLetter,
-                audioReady = state.audioReady,
             )
         }
     }
@@ -317,22 +346,17 @@ private fun CardRow(
                     label = "card-swap",
                 ) { current ->
                     if (current.isRevealed || current.id == reactingCardId) {
-                        LetterCardView(
-                            card = current,
+                        BalloonView(
+                            slotIndex = current.revealIndex.coerceIn(0, 2),
+                            letter = current.letter,
                             isReacting = current.id == reactingCardId,
                             feedback = if (current.id == reactingCardId) reactingFeedback else LetterCardFeedback.None,
                             onTap = { onTap(current.letter) },
                         )
                     } else {
                         // Reserved slot keeps the row layout stable while the
-                        // first card reveals.
-                        Box(
-                            modifier = Modifier
-                                .size(120.dp)
-                                .clip(RoundedCornerShape(28.dp))
-                                .background(AbatiQColors.Paper.copy(alpha = 0.4f))
-                                .border(2.dp, AbatiQColors.CreamDim, RoundedCornerShape(28.dp)),
-                        )
+                        // first balloon reveals.
+                        PlaceholderBalloon()
                     }
                 }
             }
@@ -341,110 +365,6 @@ private fun CardRow(
 }
 
 private const val CompanionLetters: Int = 3
-
-@Composable
-private fun LetterCardView(
-    card: LetterCard,
-    isReacting: Boolean,
-    feedback: LetterCardFeedback,
-    onTap: () -> Unit,
-) {
-    val baseScale by animateFloatAsState(
-        targetValue = if (isReacting && feedback == LetterCardFeedback.Correct) 1.16f else 1f,
-        animationSpec = tween(durationMillis = 260, easing = LinearEasing),
-        label = "card-scale",
-    )
-    val shake = rememberShakeOffset(active = isReacting && feedback == LetterCardFeedback.Gentle)
-    val rotation = if (feedback == LetterCardFeedback.Gentle) shake * 6f else 0f
-    val translationX = if (feedback == LetterCardFeedback.Gentle) shake * 18f else 0f
-
-    val borderColor = when (feedback) {
-        LetterCardFeedback.Correct -> AbatiQColors.Forest
-        LetterCardFeedback.Gentle -> AbatiQColors.Terracotta
-        LetterCardFeedback.None -> AbatiQColors.ForestDark
-    }
-    val fillColor = when (feedback) {
-        LetterCardFeedback.Correct -> AbatiQColors.Honey
-        LetterCardFeedback.Gentle -> AbatiQColors.TerracottaSoft
-        LetterCardFeedback.None -> AbatiQColors.Cream
-    }
-
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(8.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .clip(RoundedCornerShape(36.dp))
-                .background(AbatiQColors.Paper)
-                .border(3.dp, AbatiQColors.CreamDim, RoundedCornerShape(36.dp))
-                .padding(12.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .graphicsLayer {
-                        scaleX = baseScale
-                        scaleY = baseScale
-                        this.rotationZ = rotation
-                        this.translationX = translationX
-                    }
-                    .clip(RoundedCornerShape(28.dp))
-                    .background(fillColor)
-                    .border(4.dp, borderColor, RoundedCornerShape(28.dp))
-                    .clickable(enabled = !isReacting, onClick = onTap),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = card.letter,
-                    style = MaterialTheme.typography.displayLarge.copy(
-                        color = AbatiQColors.ForestDark,
-                        fontWeight = FontWeight.Black,
-                    ),
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun rememberShakeOffset(active: Boolean): Float {
-    if (!active) return 0f
-    val transition = rememberInfiniteTransition(label = "shake")
-    val phase by transition.animateFloat(
-        initialValue = 0f,
-        targetValue = (2 * PI).toFloat(),
-        animationSpec = infiniteRepeatable(animation = tween(durationMillis = 220, easing = LinearEasing)),
-        label = "shake-phase",
-    )
-    return sin(phase.toDouble()).toFloat()
-}
-
-@Composable
-private fun GameFooter(
-    targetLetter: String,
-    audioReady: Boolean,
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center,
-    ) {
-        val status = if (audioReady) {
-            stringResource(R.string.game_footer_listen)
-        } else {
-            stringResource(R.string.game_footer_no_audio)
-        }
-        Text(
-            text = status,
-            style = MaterialTheme.typography.titleMedium.copy(color = AbatiQColors.InkSoft),
-        )
-    }
-}
 
 private fun placeholderCard(index: Int): LetterCard = LetterCard(
     letter = "",

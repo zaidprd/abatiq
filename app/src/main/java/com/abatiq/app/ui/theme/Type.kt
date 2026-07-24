@@ -2,9 +2,11 @@ package com.abatiq.app.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.abatiq.app.R
 
 /**
  * Typography uses the platform's sans-serif family so we never bundle an
@@ -12,6 +14,17 @@ import androidx.compose.ui.unit.sp
  * feel without the heaviness of Material's defaults.
  */
 private val Family = FontFamily.SansSerif
+
+/**
+ * Sniglet — bundled display font (OFL) used only for the oversized letters
+ * inside balloons in the "Tebak Huruf" playfield. Sniglet has only one weight
+ * (Regular 400), so we deliberately do NOT use it for body UI: timer chips,
+ * score chips, buttons, and footer text continue to use [Family] for
+ * legibility at small sizes.
+ */
+val Sniglet = FontFamily(
+    Font(R.font.sniglet_regular, FontWeight.Normal),
+)
 
 val AbatiQTypography = Typography(
     displayLarge = TextStyle(

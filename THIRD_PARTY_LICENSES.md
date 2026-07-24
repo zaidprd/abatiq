@@ -85,10 +85,27 @@ artwork at this phase.
 
 ## Fonts
 
-We deliberately use the platform's bundled sans-serif family
-(`FontFamily.SansSerif`). No third-party font files are bundled, so no
-attribution is owed. When an open-source rounded font is introduced later
-(MIT or OFL) it will be listed here.
+Most of the UI uses the platform's bundled sans-serif family
+(`FontFamily.SansSerif`) so we never depend on an external font for routine
+text. For the "Tebak Huruf" playfield we additionally bundle **Sniglet** to
+give the oversized letters inside the balloons a friendly, rounded display
+look.
+
+| Font    | Source                                       | Licence                  | Bundled at                                  | Used for                                  |
+|---------|----------------------------------------------|--------------------------|---------------------------------------------|-------------------------------------------|
+| Sniglet | https://fonts.google.com/specimen/Sniglet — original glyph design by Haley Fiegener, hosted via the [google/fonts](https://github.com/google/fonts/tree/main/ofl/sniglet) repository under `ofl/sniglet/`. | [SIL Open Font License 1.1](https://scripts.sil.org/OFL) — free for commercial use, no required attribution. | `app/src/main/res/font/sniglet_regular.ttf` (the Regular 400 weight; Sniglet ships with a single weight so we do not bundle ExtraBold). | Display-sized letters `A`–`J` inside the balloons on the Game screen. NOT used for buttons, timer/score chips, or other body UI. |
+
+Per the OFL we are not required to credit the designer, but we do so here
+for transparency.
+
+---
+
+## Bundled artwork (Phase 1 onwards)
+
+| Asset                                              | Source / licence                                                | Bundled at                                                              | Used for                                                                                                              |
+|----------------------------------------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `ic_background_tebak_huruf_konversi.webp`          | Original artwork created by the project owner in Canva, depicting a calm TK (taman kanak-kanak) classroom scene (mint wall, soft-blue lower wall, whiteboard with book shelf, round carpet, child-sized furniture, window with greenery, rainbow mural). Reviewed against PRD Bab 3: **no faces, no licensed characters, no musical instruments, no alcohol, no inappropriate apparel**. Delivered as WebP (~74 KB) instead of the original 3 MB PNG to keep the APK lean. | `app/src/main/res/drawable/ic_background_tebak_huruf_konversi.webp`       | Background of the `GameScreen` (landscape "Tebak Huruf" playfield), overlaid with a soft cream radial scrim so the balloons stay focal. |
+| `background_tebak_huruf.png` & `style_yang_di_inginkan.png` (originals in repo root) | Internal Canva compositions kept outside `res/` purely as out-of-band visual references. **Not bundled inside the APK**; balloons are re-drawn with Compose `Canvas` referencing the style image. | (not bundled)                                                           | Documentation / hand-off reference for the design choices in `ui/components/BalloonView.kt`.                          |
 
 ---
 

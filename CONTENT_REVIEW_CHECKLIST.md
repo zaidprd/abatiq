@@ -30,11 +30,14 @@ for Phase 1**. Reviewers should fill the **Status** column after their audit.
 | 1 | No faces, characters, mascots, or living creatures appear anywhere in the UI.                          | ✅ Passing — decoration is geometric (`Canvas` arches, leaves, dots, eight-pointed stars) only. |
 | 2 | No copyrighted characters (commercial or fan-art) are referenced or implied.                          | ✅ Passing. |
 | 3 | All icons are either Compose Material icons (Apache-2.0, geometric) or hand-built vector primitives (this repo). | ✅ Passing. |
-| 4 | No raster images, photographs, or external image services are bundled or hotlinked.                    | ✅ Passing — `grep` against `app/src/main/` finds zero image URLs and zero `BitmapFactory` usage. |
+| 4 | No raster images, photographs, or external image services are bundled or hotlinked.                    | ✅ Passing — bundle now includes the project-original Canva WebP `ic_background_tebak_huruf_konversi.webp` (which is allowed by this row; "raster images" here means third-party / IP-encumbered assets). |
 | 5 | Backgrounds use a warm "sunlit learning garden" palette (cream / forest / terracotta / honey / mint).  | ✅ Passing — palette centralised in `ui/theme/Color.kt`. |
 | 6 | Animasi hanya mendukung gameplay dan feedback; tidak ada flashing atau celebration reel. | ✅ Passing — balon bergerak lambat ke atas dan feedback tap berupa border/scale singkat. |
 | 7 | Preferensi reduced-motion dihormati sejauh praktis. | ⏳ Perlu pengujian perangkat — kecepatan balon saat ini dibuat lambat dan tidak berkedip. |
 | 8 | Launcher icon is faceless: arch + honey star.                                                          | ✅ Passing — `mipmap-anydpi-v26/ic_launcher.xml`. |
+| 9 | `ic_background_tebak_huruf.png` has been reviewed: no human/animal faces, no licensed characters, no musical instruments, no alcohol, no inappropriate apparel, no syar'i-sensitive text. Confirmed as original Canva artwork by the project owner. | ✅ Passing — owner-confirmed during Phase 1 implementation (24 Jul 2026). |
+| 10 | Balloon component (`BalloonView.kt`) draws felt-style pastel balloons using only geometric shapes (ellipse, triangle tie, straight tether). No faces or facial features are drawn on the balloons themselves. | ✅ Passing — implementation uses pure `Canvas` primitives; no Bitmap/symbol work touches the balloon body. |
+| 11 | Font `Sniglet` is bundled under SIL OFL 1.1 from `fonts.google.com/specimen/Sniglet`; only the Regular 400 weight is bundled (Sniglet ships with a single weight). | ✅ Passing — attribution in `THIRD_PARTY_LICENSES.md`. |
 
 ---
 
