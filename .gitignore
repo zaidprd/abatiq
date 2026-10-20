@@ -1,0 +1,12 @@
+# Daftar putih: hanya karya proyek video yang ikut. Semua lain diabaikan.
+*
+!.gitignore
+!README.md
+!CREDITS.md
+!Belajar_Huruf_a.ecproj
+!aset/
+!aset/**
+!sfx/
+sfx/*
+!sfx/makan_kerupuk_tutup_mulut.mp3
+!sfx/sfx_*.mp3
