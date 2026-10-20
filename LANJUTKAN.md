@@ -52,3 +52,11 @@ SFX (semua CC0, lihat `CREDITS.md`): apel muncul, gerak lompat, ting tiap goresa
 - **EffectCraft** (alternatif After Effects, bisa dikendalikan Claude lewat MCP).
 - **VectorCraft** (alternatif Illustrator, ada CLI `vectorcraft-cli run --cmd ... --export ...`).
 - **Freesound API** untuk SFX. Kuncinya ada **hanya di komputer pemilik** (jangan diunggah ke repo).
+
+## Pembaruan: karakter anak (belum dipasang)
+- Proyek `Belajar_Huruf_a.ecproj` di repo masih memakai **anak gaya flat lama** (utuh, jalan). Perakitan anak semi-3D sempat dicoba tapi rusak dan **tidak disimpan**.
+- Keputusan sementara: anak **semi-3D** sekeluarga dengan kura-kura. Dasar rig: `aset/anak/referensi/lembar_bagian_v2.png` (kepala, badan tanpa lengan, lengan atas/bawah, celana, kaki). Tambahan: `lembar_tangan.png` (8 pose tangan), `lembar_kepala.png`.
+- Kekurangan lembar v2: kepala agak kecil (skalakan), celana satu bagian dengan penyambung kulit di pergelangan.
+- `aset/make_anak_bagian.py` memecah gambar A-pose utuh (`aset/anak/anak_utuh.png`), tapi hasil bahu/siku kasar. Lebih baik memecah lembar v2.
+- Pelajaran: setelah `parent`, skala komposisi anak ikut berubah (skala anak harus 100 kecuali akar). Akar `Anak_Root` skala ~37,5%.
+- Ide: karakter pengajar "Abati" dewasa, wajah polos, dibedakan lewat peci/jenggot/baju. Keputusan belum final (aturan tanpa wajah dipertahankan).

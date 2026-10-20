@@ -1,0 +1,52 @@
+{
+ "ukuran": [
+  718,
+  1473
+ ],
+ "offset": [
+  142,
+  38
+ ],
+ "lantai": [
+  364,
+  1457
+ ],
+ "pivot": {
+  "leher": [
+   364,
+   562
+  ],
+  "pinggang": [
+   364,
+   992
+  ],
+  "pinggul": [
+   364,
+   1022
+  ],
+  "bahu_kiri": [
+   210,
+   630
+  ],
+  "bahu_kanan": [
+   518,
+   630
+  ],
+  "siku_kiri": [
+   138,
+   774
+  ],
+  "siku_kanan": [
+   590,
+   774
+  ],
+  "pergelangan_kiri": [
+   218,
+   1382
+  ],
+  "pergelangan_kanan": [
+   510,
+   1382
+  ]
+ }
+}
