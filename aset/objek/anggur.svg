@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="linear-gradient-1" x1="349.254" y1="115.438" x2="467.202" y2="-2.51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#79d160"/>
+      <stop offset="1" stop-color="#2f8f3a"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient-1" cx="300" cy="170" r="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="390" cy="170" r="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="210" cy="170" r="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="345" cy="250" r="49.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-5" cx="255" cy="250" r="49.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-6" cx="435" cy="250" r="49.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-7" cx="165" cy="250" r="49.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-8" cx="300" cy="330" r="47.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-9" cx="390" cy="330" r="47.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-10" cx="210" cy="330" r="47.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-11" cx="345" cy="410" r="44.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-12" cx="255" cy="410" r="44.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-13" cx="300" cy="490" r="42.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b565d6"/>
+      <stop offset="1" stop-color="#6a1f8f"/>
+    </radialGradient>
+  </defs>
+  <title>anggur</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="Bayangan" d="M130 560 C130 547.85 206.112 538 300 538 C393.888 538 470 547.85 470 560 C470 572.15 393.888 582 300 582 C206.112 582 130 572.15 130 560 Z" fill="#2a1a3a" opacity="0.15"/>
+    <path id="Tangkai" d="M300 70 C302.2 61.6 320.4 44.1 330 40 C339.6 35.9 373.5 34.8 380 36 C386.5 37.2 388.8 45.9 384 50 C379.2 54.1 348.6 62.8 340 70 C331.4 77.2 316.8 110 312 110 C307.2 110 297.8 78.4 300 70 Z" fill="#6b4a2a"/>
+    <path id="Daun" d="M330 60 C338.3 48.3 376.7 23.7 400 20 C423.3 16.3 455.7 28 470 38 C484.3 48 494.3 71 486 80 C477.7 89 442.7 90.3 420 92 C397.3 93.7 365 95.3 350 90 C335 84.7 321.7 71.7 330 60 Z" fill="url(#linear-gradient-1)"/>
+    <path id="Buah_0" d="M248 170 C248 141.281 271.281 118 300 118 C328.719 118 352 141.281 352 170 C352 198.719 328.719 222 300 222 C271.281 222 248 198.719 248 170 Z" fill="url(#radial-gradient-1)"/>
+    <path id="Kilau_0" d="M271.432 145.405 C275.073 137.597 282.667 133.431 288.393 136.102 C294.119 138.772 295.809 147.266 292.168 155.075 C288.527 162.883 280.933 167.049 275.207 164.378 C269.481 161.708 267.791 153.214 271.432 145.405 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_1" d="M338 170 C338 141.281 361.281 118 390 118 C418.719 118 442 141.281 442 170 C442 198.719 418.719 222 390 222 C361.281 222 338 198.719 338 170 Z" fill="url(#radial-gradient-2)"/>
+    <path id="Kilau_1" d="M361.432 145.405 C365.073 137.597 372.667 133.431 378.393 136.102 C384.119 138.772 385.809 147.266 382.168 155.075 C378.527 162.883 370.933 167.049 365.207 164.378 C359.481 161.708 357.791 153.214 361.432 145.405 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_2" d="M158 170 C158 141.281 181.281 118 210 118 C238.719 118 262 141.281 262 170 C262 198.719 238.719 222 210 222 C181.281 222 158 198.719 158 170 Z" fill="url(#radial-gradient-3)"/>
+    <path id="Kilau_2" d="M181.432 145.405 C185.073 137.597 192.667 133.431 198.393 136.102 C204.119 138.772 205.809 147.266 202.168 155.075 C198.527 162.883 190.933 167.049 185.207 164.378 C179.481 161.708 177.791 153.214 181.432 145.405 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_3" d="M295.4 250 C295.4 222.607 317.607 200.4 345 200.4 C372.393 200.4 394.6 222.607 394.6 250 C394.6 277.393 372.393 299.6 345 299.6 C317.607 299.6 295.4 277.393 295.4 250 Z" fill="url(#radial-gradient-4)"/>
+    <path id="Kilau_3" d="M317.75 226.54 C321.223 219.092 328.467 215.119 333.929 217.666 C339.39 220.213 341.003 228.316 337.53 235.764 C334.057 243.212 326.813 247.185 321.351 244.638 C315.89 242.091 314.277 233.988 317.75 226.54 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_4" d="M205.4 250 C205.4 222.607 227.607 200.4 255 200.4 C282.393 200.4 304.6 222.607 304.6 250 C304.6 277.393 282.393 299.6 255 299.6 C227.607 299.6 205.4 277.393 205.4 250 Z" fill="url(#radial-gradient-5)"/>
+    <path id="Kilau_4" d="M227.75 226.54 C231.223 219.092 238.467 215.119 243.929 217.666 C249.39 220.213 251.003 228.316 247.53 235.764 C244.057 243.212 236.813 247.185 231.351 244.638 C225.89 242.091 224.277 233.988 227.75 226.54 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_5" d="M385.4 250 C385.4 222.607 407.607 200.4 435 200.4 C462.393 200.4 484.6 222.607 484.6 250 C484.6 277.393 462.393 299.6 435 299.6 C407.607 299.6 385.4 277.393 385.4 250 Z" fill="url(#radial-gradient-6)"/>
+    <path id="Kilau_5" d="M407.75 226.54 C411.223 219.092 418.467 215.119 423.929 217.666 C429.39 220.213 431.003 228.316 427.53 235.764 C424.057 243.212 416.813 247.185 411.351 244.638 C405.89 242.091 404.277 233.988 407.75 226.54 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_6" d="M115.4 250 C115.4 222.607 137.607 200.4 165 200.4 C192.393 200.4 214.6 222.607 214.6 250 C214.6 277.393 192.393 299.6 165 299.6 C137.607 299.6 115.4 277.393 115.4 250 Z" fill="url(#radial-gradient-7)"/>
+    <path id="Kilau_6" d="M137.75 226.54 C141.223 219.092 148.467 215.119 153.929 217.666 C159.39 220.213 161.003 228.316 157.53 235.764 C154.057 243.212 146.813 247.185 141.351 244.638 C135.89 242.091 134.277 233.988 137.75 226.54 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_7" d="M252.8 330 C252.8 303.932 273.932 282.8 300 282.8 C326.068 282.8 347.2 303.932 347.2 330 C347.2 356.068 326.068 377.2 300 377.2 C273.932 377.2 252.8 356.068 252.8 330 Z" fill="url(#radial-gradient-8)"/>
+    <path id="Kilau_7" d="M274.069 307.676 C277.374 300.588 284.267 296.807 289.464 299.231 C294.662 301.654 296.196 309.365 292.891 316.452 C289.586 323.54 282.693 327.321 277.496 324.897 C272.298 322.474 270.764 314.763 274.069 307.676 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_8" d="M342.8 330 C342.8 303.932 363.932 282.8 390 282.8 C416.068 282.8 437.2 303.932 437.2 330 C437.2 356.068 416.068 377.2 390 377.2 C363.932 377.2 342.8 356.068 342.8 330 Z" fill="url(#radial-gradient-9)"/>
+    <path id="Kilau_8" d="M364.069 307.676 C367.374 300.588 374.267 296.807 379.464 299.231 C384.662 301.654 386.196 309.365 382.891 316.452 C379.586 323.54 372.693 327.321 367.496 324.897 C362.298 322.474 360.764 314.763 364.069 307.676 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_9" d="M162.8 330 C162.8 303.932 183.932 282.8 210 282.8 C236.068 282.8 257.2 303.932 257.2 330 C257.2 356.068 236.068 377.2 210 377.2 C183.932 377.2 162.8 356.068 162.8 330 Z" fill="url(#radial-gradient-10)"/>
+    <path id="Kilau_9" d="M184.069 307.676 C187.374 300.588 194.267 296.807 199.464 299.231 C204.662 301.654 206.196 309.365 202.891 316.452 C199.586 323.54 192.693 327.321 187.496 324.897 C182.298 322.474 180.764 314.763 184.069 307.676 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_10" d="M300.2 410 C300.2 385.258 320.258 365.2 345 365.2 C369.742 365.2 389.8 385.258 389.8 410 C389.8 434.742 369.742 454.8 345 454.8 C320.258 454.8 300.2 434.742 300.2 410 Z" fill="url(#radial-gradient-11)"/>
+    <path id="Kilau_10" d="M320.387 388.811 C323.524 382.083 330.067 378.495 335 380.795 C339.933 383.096 341.39 390.414 338.253 397.141 C335.116 403.869 328.573 407.457 323.64 405.157 C318.707 402.856 317.25 395.538 320.387 388.811 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_11" d="M210.2 410 C210.2 385.258 230.258 365.2 255 365.2 C279.742 365.2 299.8 385.258 299.8 410 C299.8 434.742 279.742 454.8 255 454.8 C230.258 454.8 210.2 434.742 210.2 410 Z" fill="url(#radial-gradient-12)"/>
+    <path id="Kilau_11" d="M230.387 388.811 C233.524 382.083 240.067 378.495 245 380.795 C249.933 383.096 251.39 390.414 248.253 397.141 C245.116 403.869 238.573 407.457 233.64 405.157 C228.707 402.856 227.25 395.538 230.387 388.811 Z" fill="#ffffff" opacity="0.45"/>
+    <path id="Buah_12" d="M257.6 490 C257.6 466.583 276.583 447.6 300 447.6 C323.417 447.6 342.4 466.583 342.4 490 C342.4 513.417 323.417 532.4 300 532.4 C276.583 532.4 257.6 513.417 257.6 490 Z" fill="url(#radial-gradient-13)"/>
+    <path id="Kilau_12" d="M276.706 469.946 C279.675 463.579 285.867 460.183 290.536 462.36 C295.205 464.537 296.583 471.463 293.614 477.83 C290.645 484.197 284.453 487.593 279.784 485.416 C275.115 483.239 273.737 476.313 276.706 469.946 Z" fill="#ffffff" opacity="0.45"/>
+  </g>
+</svg>

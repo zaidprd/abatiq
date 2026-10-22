@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600">
+  <title>bintang_aktif</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="Bintang_bawah" d="M300 122 L357.603 232.716 L480.701 253.287 L393.204 342.284 L411.679 465.713 L300 410 L188.321 465.713 L206.796 342.284 L119.299 253.287 L242.397 232.716 Z" fill="#e5b000" stroke="#e5b000" stroke-width="22" stroke-linejoin="round"/>
+    <path id="Bintang" d="M300 106 L357.603 216.716 L480.701 237.287 L393.204 326.284 L411.679 449.713 L300 394 L188.321 449.713 L206.796 326.284 L119.299 237.287 L242.397 216.716 Z" fill="#ffc93c" stroke="#ffc93c" stroke-width="22" stroke-linejoin="round"/>
+    <path id="Kilau" d="M213.702 229.913 C209.267 223.579 215.207 211.768 226.97 203.532 C238.732 195.296 251.863 193.753 256.298 200.087 C260.733 206.421 254.793 218.232 243.03 226.468 C231.268 234.704 218.137 236.247 213.702 229.913 Z" fill="#ffffff" opacity="0.6"/>
+  </g>
+</svg>

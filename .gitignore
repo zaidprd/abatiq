@@ -5,9 +5,15 @@
 !CREDITS.md
 !LANJUTKAN.md
 !Belajar_Huruf_a.ecproj
+!Huruf_A_3menit.ecproj
+!NASKAH_HURUF_A.md
+!RENCANA_PRODUKSI.md
 !aset/
 !aset/**
 !sfx/
 sfx/*
 !sfx/makan_kerupuk_tutup_mulut.mp3
 !sfx/sfx_*.mp3
+# belum dipakai / kerja terpisah
+aset/anak/hires/
+aset/anak/keriting/

@@ -1,0 +1,182 @@
+{
+ "jalan_1": {
+  "ukuran": [
+   323,
+   809
+  ],
+  "dagu": [
+   168.0,
+   337.0
+  ],
+  "kaki": [
+   105.0,
+   622.0
+  ],
+  "mode": "terpisah"
+ },
+ "jalan_2": {
+  "ukuran": [
+   324,
+   809
+  ],
+  "dagu": [
+   171.0,
+   337.0
+  ],
+  "kaki": [
+   139.0,
+   621.0
+  ],
+  "mode": "terpisah"
+ },
+ "jalan_3": {
+  "ukuran": [
+   324,
+   809
+  ],
+  "dagu": [
+   158.0,
+   337.0
+  ],
+  "kaki": [
+   142.0,
+   623.0
+  ],
+  "mode": "terpisah"
+ },
+ "jalan_4": {
+  "ukuran": [
+   323,
+   809
+  ],
+  "dagu": [
+   150.0,
+   337.0
+  ],
+  "kaki": [
+   83.0,
+   623.0
+  ],
+  "mode": "terpisah"
+ },
+ "jalan_5": {
+  "ukuran": [
+   324,
+   809
+  ],
+  "dagu": [
+   146.0,
+   337.0
+  ],
+  "kaki": [
+   182.0,
+   623.0
+  ],
+  "mode": "terpisah"
+ },
+ "jalan_6": {
+  "ukuran": [
+   324,
+   809
+  ],
+  "dagu": [
+   139.0,
+   337.0
+  ],
+  "kaki": [
+   80.0,
+   623.0
+  ],
+  "mode": "terpisah"
+ },
+ "menunjuk_atas": {
+  "ukuran": [
+   512,
+   512
+  ],
+  "dagu": [
+   376.0,
+   187.0
+  ],
+  "kaki": [
+   374.0,
+   483.0
+  ],
+  "mode": "terpisah"
+ },
+ "menunjuk_bawah": {
+  "ukuran": [
+   512,
+   512
+  ],
+  "dagu": [
+   247.0,
+   189.0
+  ],
+  "kaki": [
+   288.5,
+   482.0
+  ],
+  "mode": "terpisah"
+ },
+ "jempol": {
+  "ukuran": [
+   512,
+   512
+  ],
+  "dagu": [
+   208.0,
+   180.0
+  ],
+  "kaki": [
+   159.0,
+   483.0
+  ],
+  "mode": "terpisah"
+ },
+ "stop": {
+  "ukuran": [
+   512,
+   512
+  ],
+  "dagu": [
+   335.0,
+   162.0
+  ],
+  "kaki": [
+   362.5,
+   464.0
+  ],
+  "mode": "terpisah"
+ },
+ "mendengar": {
+  "ukuran": [
+   512,
+   512
+  ],
+  "dagu": [
+   217.0,
+   168.0
+  ],
+  "kaki": [
+   301.5,
+   464.0
+  ],
+  "mode": "dipotong"
+ },
+ "duduk_bersila": {
+  "ukuran": [
+   512,
+   512
+  ],
+  "dagu": [
+   188.0,
+   243.0
+  ],
+  "kaki": [
+   166.0,
+   449.0
+  ],
+  "mode": "terpisah"
+ }
+}

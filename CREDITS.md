@@ -9,6 +9,7 @@
 | `sfx/sfx_ting_xilofon.mp3` | Xylophone E3 | juancamiloorjuela | https://freesound.org/s/204634/ |
 | `sfx/sfx_boing_lompat.mp3` | Game Jump Sound - Boing (1 of 2) | el_boss | https://freesound.org/s/751698/ |
 | `sfx/sfx_sparkle_selesai.mp3` | achievement-sparkle | SkySpeira | https://freesound.org/s/715067/ |
+| `sfx/sfx_langkah_sepatu.mp3` | Sneaker Shoes Quick Forest Footstep | Joao_Janz | https://freesound.org/s/504347/ |
 
 Berkas di repo ini adalah pratinjau mp3 dari Freesound.
 

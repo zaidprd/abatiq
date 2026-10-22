@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600">
+  <title>bintang_kosong</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="Bintang_bawah" d="M300 122 L357.603 232.716 L480.701 253.287 L393.204 342.284 L411.679 465.713 L300 410 L188.321 465.713 L206.796 342.284 L119.299 253.287 L242.397 232.716 Z" fill="#c9ced6" stroke="#c9ced6" stroke-width="22" stroke-linejoin="round"/>
+    <path id="Bintang" d="M300 106 L357.603 216.716 L480.701 237.287 L393.204 326.284 L411.679 449.713 L300 394 L188.321 449.713 L206.796 326.284 L119.299 237.287 L242.397 216.716 Z" fill="#e5e8ee" stroke="#e5e8ee" stroke-width="22" stroke-linejoin="round"/>
+  </g>
+</svg>
