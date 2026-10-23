@@ -7,6 +7,17 @@
 !Belajar_Huruf_a.ecproj
 !Huruf_A_3menit.ecproj
 !NASKAH_HURUF_A.md
+!BRIEF_ILUSTRATOR.md
+!POSTINGAN_FASTWORK.txt
+!suara/
+suara/*
+!suara/*.py
+!suara/TEKS_TES_WEB.txt
+!suara/final/
+suara/final/*
+!suara/final/klip2/
+!suara/final/klip2/*
+!suara/final/peta_kalimat.json
 !RENCANA_PRODUKSI.md
 !aset/
 !aset/**

@@ -1,0 +1,27 @@
+TEKS UNTUK DITES DI WEB FISH AUDIO (model Drama 3, suara zaid)
+Tiap blok di bawah muat di batas 500 karakter. Tempel satu blok ke kotak teks lalu Generate.
+Nada dibuat lembut dan hangat untuk anak-anak, tanpa seruan keras.
+Waktu tayang = detik mulai blok di video.
+
+=== BLOK 1 (detik 5, pembuka dan keranjang) ===
+[lembut, hangat, ramah, seperti guru TK berbicara pelan kepada anak kecil, tidak membentak] Halo anak-anak soleh dan solehah. Ini Abatiku. [pause] Hari ini, kita belajar huruf a. [pause] Tok tok... eh, ada apa ya, di dalam keranjang? [pause] Digembok. Gemboknya bergambar huruf a.
+
+=== BLOK 2 (detik 15,5, dengar bunyinya) ===
+[lembut, hangat, ramah, seperti guru TK berbicara pelan kepada anak kecil, tidak membentak] Ini huruf A besar. [pause] Ini huruf a kecil. [pause] Ayo kita buka gembok dengan bunyinya. [pause] Bunyinya... aaa. [pause] Ayo ikuti... aaa. [pause] Bagus. Aaa. [pause] Satu kunci.
+
+=== BLOK 3 (detik 41,5, buah) ===
+[lembut, hangat, ramah, seperti guru TK berbicara pelan kepada anak kecil, tidak membentak] A... apel. [pause] A... anggur. [pause] A... alpukat. [pause] Dua kunci. [pause] Ayo hitung apelnya. Satu... dua... tiga. Ada tiga apel.
+
+=== BLOK 4 (detik 87, menulis) ===
+[lembut, hangat, sabar, seperti guru TK mengajar menulis kepada anak kecil, tidak membentak] Gemboknya minta kata sandi: huruf a. Ayo kita tulis. [pause] Satu: putar membentuk lingkaran. [pause] Dua: tarik garis lurus ke bawah. [pause] Ayo kita ulangi. Tulis di udara, dengan jarimu. [pause] Hebat. [pause] Tiga kunci.
+
+=== BLOK 5 (detik 139, tebak huruf) ===
+[lembut, hangat, ramah, seperti guru TK berbicara pelan kepada anak kecil, tidak membentak] Mana huruf a? Ayo tebak. [pause] Betul, ini huruf a. Empat kunci. [pause] Sekali lagi. Mana huruf a? [pause] Betul. Lima kunci.
+
+=== BLOK 6 (detik 166,5, gembok terbuka) ===
+[lembut, hangat, takjub tapi tetap pelan, seperti guru TK berbicara kepada anak kecil, tidak membentak] Wah, kita sudah punya semua kunci. [pause] Ayo kita buka gemboknya... [pause] Tadaa. Ada apel, anggur, dan alpukat. A untuk apel, anggur, alpukat. Hebat. [pause] Eh, ada keranjang lagi. Tok tok... isinya apa ya? Kita buka nanti.
+
+CATATAN
+- Satu blok = beberapa kalimat dalam satu napas. Jeda antar kalimat di video lebih panjang (anak diminta menjawab), jadi nanti kalimat dipotong atau diatur ulang sesuai lembar isyarat.
+- Tidak ada garis bawah. "ABATI_Q" ditulis "Abatiku".
+- Kalau ada kata yang terdengar ketus, ganti tanda seru (!) dengan titik (.) atau tanda tiga titik (...).

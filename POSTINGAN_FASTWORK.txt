@@ -1,0 +1,25 @@
+Untuk channel YouTube edukasi anak, saya butuh 1 karakter anak laki-laki 2D yang saya animasikan sendiri di After Effects. Yang dibutuhkan file berlapis, tiap bagian tubuh terpisah.
+
+KARAKTER
+- Anak laki-laki sekitar 5 tahun, proporsi chibi (kepala besar).
+- Tanpa wajah: tanpa mata, hidung, mulut. Hanya kulit polos, telinga, pipi merona. Rambut keriting hitam, terpisah dari kepala.
+- Tanpa leher, kepala terpisah dari badan.
+- Pakaian sopan: kaus lengan panjang biru muda, celana pendek abu-abu, sepatu merah.
+- Gaya 2D datar bersih, garis tepi cokelat tipis ketebalan sama, warna cerah.
+
+YANG DIMINTA (bertahap)
+A. Lembar karakter: tampak depan, samping, belakang.
+B. Bagian terpisah (tampak depan dan samping): kepala, badan, lengan atas kiri/kanan, lengan bawah+tangan kiri/kanan, pinggul, kaki kiri/kanan. Ujung sambungan dilebihkan 15-20 px dan bagian tertutup digambar lengkap. Minimal 5 bentuk tangan (santai, menunjuk, jempol, stop, menggenggam).
+C. Pakaian bisa diganti: kulit dan pakaian di layer terpisah. Tubuh kulit digambar lengkap di bawah baju. Tiap pakaian layer sendiri (kaus, lengan baju terpisah dari badan, celana, sepatu), manset tidak menyatu dengan tangan. Varian: kaus lengan panjang/pendek, celana pendek/panjang, 1 baju tambahan.
+D. Pose utuh: jalan menyamping 6 gambar (bisa diulang), melambai, menunjuk (atas/samping/bawah), jempol, tangan di telinga, bersila.
+
+FILE
+- .psd atau .ai berlapis, 3000x3000 px, RGB, layer bernama, tidak digabung.
+- PNG transparan per bagian, kanvas dan posisi sama (tidak dipotong rapat). Idealnya juga SVG.
+
+SYARAT
+- Karya asli (bukan tracing, bukan AI tanpa diedit).
+- Hak cipta penuh dan hak komersial ke saya setelah lunas, tidak dipakai ulang untuk klien lain.
+- Revisi minimal 2 kali per tahap.
+
+Mohon sertakan contoh karakter berbagian terpisah, estimasi harga dan waktu per tahap A-D, dan kesediaan membuat contoh kecil dulu (kepala, badan, satu lengan).

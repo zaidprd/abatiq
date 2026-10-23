@@ -1,0 +1,232 @@
+{
+ "blok1_005.0_pembuka": {
+  "durasi": 21.759938,
+  "kalimat": [
+   {
+    "teks": "Halo anak-anak soleh dan soleha.",
+    "mulai": 0.0,
+    "selesai": 2.68
+   },
+   {
+    "teks": "Kembali lagi di channel Abatiku.",
+    "mulai": 3.11,
+    "selesai": 5.87
+   },
+   {
+    "teks": "Hari ini kita belajar huruf a, yuk.",
+    "mulai": 6.44,
+    "selesai": 9.91
+   },
+   {
+    "teks": "Tok tok...",
+    "mulai": 10.76,
+    "selesai": 11.81
+   },
+   {
+    "teks": "eh, ada apa ya di dalam keranjang?",
+    "mulai": 12.14,
+    "selesai": 15.1
+   },
+   {
+    "teks": "Wah, keranjangnya digembok.",
+    "mulai": 15.69,
+    "selesai": 18.07
+   },
+   {
+    "teks": "Gemboknya bergambar huruf a.",
+    "mulai": 18.57,
+    "selesai": 21.35
+   }
+  ]
+ },
+ "blok2_015.5_bunyi": {
+  "durasi": 19.252125,
+  "kalimat": [
+   {
+    "teks": "Nah, ini huruf A besar.",
+    "mulai": 0.0,
+    "selesai": 2.26
+   },
+   {
+    "teks": "Dan ini huruf a kecil.",
+    "mulai": 2.64,
+    "selesai": 4.73
+   },
+   {
+    "teks": "Yuk, kita buka gemboknya dengan bunyinya.",
+    "mulai": 5.26,
+    "selesai": 8.17
+   },
+   {
+    "teks": "Bunyinya...",
+    "mulai": 8.71,
+    "selesai": 9.58
+   },
+   {
+    "teks": "aaa.",
+    "mulai": 10.05,
+    "selesai": 10.85
+   },
+   {
+    "teks": "Ayo ikuti,",
+    "mulai": 11.15,
+    "selesai": 11.94
+   },
+   {
+    "teks": "aaa.",
+    "mulai": 12.52,
+    "selesai": 13.27
+   },
+   {
+    "teks": "Pintar sekali.",
+    "mulai": 13.85,
+    "selesai": 15.02
+   },
+   {
+    "teks": "Aaa. Yeay, satu kunci.",
+    "mulai": 15.53,
+    "selesai": 18.85
+   }
+  ]
+ },
+ "blok3_041.5_buah": {
+  "durasi": 15.75175,
+  "kalimat": [
+   {
+    "teks": "A... apel.",
+    "mulai": 0.0,
+    "selesai": 1.5
+   },
+   {
+    "teks": "A... anggur.",
+    "mulai": 2.19,
+    "selesai": 3.61
+   },
+   {
+    "teks": "A... alpukat.",
+    "mulai": 4.38,
+    "selesai": 5.85
+   },
+   {
+    "teks": "Yeay, dua kunci.",
+    "mulai": 6.3,
+    "selesai": 7.82
+   },
+   {
+    "teks": "Yuk, kita hitung apelnya.",
+    "mulai": 8.22,
+    "selesai": 10.14
+   },
+   {
+    "teks": "Satu... dua... tiga.",
+    "mulai": 10.7,
+    "selesai": 12.75
+   },
+   {
+    "teks": "Ada tiga apel.",
+    "mulai": 13.09,
+    "selesai": 15.35
+   }
+  ]
+ },
+ "blok4_087.0_menulis": {
+  "durasi": 23.980313,
+  "kalimat": [
+   {
+    "teks": "Gemboknya minta kata sandi, yaitu huruf a.",
+    "mulai": 0.0,
+    "selesai": 4.53
+   },
+   {
+    "teks": "Yuk, kita tulis bersama.",
+    "mulai": 5.01,
+    "selesai": 6.84
+   },
+   {
+    "teks": "Satu: putar membentuk lingkaran.",
+    "mulai": 7.36,
+    "selesai": 10.34
+   },
+   {
+    "teks": "Dua: tarik garis lurus ke bawah.",
+    "mulai": 10.76,
+    "selesai": 13.84
+   },
+   {
+    "teks": "Sekarang kita ulangi, ya.",
+    "mulai": 14.34,
+    "selesai": 16.4
+   },
+   {
+    "teks": "Tulis di udara dengan jari kecilmu.",
+    "mulai": 16.95,
+    "selesai": 19.78
+   },
+   {
+    "teks": "Pintar sekali.",
+    "mulai": 20.25,
+    "selesai": 21.43
+   },
+   {
+    "teks": "Yeay, tiga kunci.",
+    "mulai": 21.67,
+    "selesai": 23.56
+   }
+  ]
+ },
+ "blok6_166.5_penutup": {
+  "durasi": 26.775438,
+  "kalimat": [
+   {
+    "teks": "Wah, kita sudah punya semua kunci.",
+    "mulai": 0.0,
+    "selesai": 2.82
+   },
+   {
+    "teks": "Yuk, kita buka gemboknya.",
+    "mulai": 3.21,
+    "selesai": 5.0
+   },
+   {
+    "teks": "Tadaa.",
+    "mulai": 5.47,
+    "selesai": 8.0
+   },
+   {
+    "teks": "Ada apel, anggur, dan alpukat.",
+    "mulai": 8.34,
+    "selesai": 10.28
+   },
+   {
+    "teks": "A untuk apel, anggur, alpukat.",
+    "mulai": 11.04,
+    "selesai": 13.67
+   },
+   {
+    "teks": "Hebat, anak-anak soleh dan soleha.",
+    "mulai": 13.93,
+    "selesai": 18.09
+   },
+   {
+    "teks": "Eh, ada keranjang lagi.",
+    "mulai": 18.53,
+    "selesai": 21.05
+   },
+   {
+    "teks": "Tok tok...",
+    "mulai": 21.62,
+    "selesai": 22.33
+   },
+   {
+    "teks": "isinya apa ya?",
+    "mulai": 23.05,
+    "selesai": 24.25
+   },
+   {
+    "teks": "Kita buka nanti, ya.",
+    "mulai": 24.78,
+    "selesai": 26.34
+   }
+  ]
+ }
+}

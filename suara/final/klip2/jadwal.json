@@ -1,0 +1,386 @@
+[
+ {
+  "berkas": "01_blok1.mp3",
+  "teks": "Halo anak-anak soleh dan soleha.",
+  "mulai_video": 5.0,
+  "kalimat_mulai": 5.0,
+  "kalimat_selesai": 7.33,
+  "durasi": 2.435
+ },
+ {
+  "berkas": "02_blok1.mp3",
+  "teks": "Kembali lagi di channel Abatiku.",
+  "mulai_video": 8.05,
+  "kalimat_mulai": 8.11,
+  "kalimat_selesai": 10.51,
+  "durasi": 2.557
+ },
+ {
+  "berkas": "03_blok1.mp3",
+  "teks": "Hari ini kita belajar huruf a, yuk.",
+  "mulai_video": 11.38,
+  "kalimat_mulai": 11.44,
+  "kalimat_selesai": 14.457,
+  "durasi": 3.174
+ },
+ {
+  "berkas": "04_blok1.mp3",
+  "teks": "Tok tok...",
+  "mulai_video": 15.7,
+  "kalimat_mulai": 15.76,
+  "kalimat_selesai": 16.673,
+  "durasi": 1.07
+ },
+ {
+  "berkas": "05_blok1.mp3",
+  "teks": "eh, ada apa ya di dalam keranjang?",
+  "mulai_video": 17.08,
+  "kalimat_mulai": 17.14,
+  "kalimat_selesai": 19.714,
+  "durasi": 2.73
+ },
+ {
+  "berkas": "06_blok1.mp3",
+  "teks": "Wah, keranjangnya digembok.",
+  "mulai_video": 20.63,
+  "kalimat_mulai": 20.69,
+  "kalimat_selesai": 22.76,
+  "durasi": 2.226
+ },
+ {
+  "berkas": "07_blok1.mp3",
+  "teks": "Gemboknya bergambar huruf a.",
+  "mulai_video": 23.51,
+  "kalimat_mulai": 23.57,
+  "kalimat_selesai": 25.987,
+  "durasi": 2.574
+ },
+ {
+  "berkas": "08_blok2.mp3",
+  "teks": "Nah, ini huruf A besar.",
+  "mulai_video": 28.3,
+  "kalimat_mulai": 28.3,
+  "kalimat_selesai": 30.265,
+  "durasi": 2.07
+ },
+ {
+  "berkas": "09_blok2.mp3",
+  "teks": "Dan ini huruf a kecil.",
+  "mulai_video": 30.88,
+  "kalimat_mulai": 30.94,
+  "kalimat_selesai": 32.757,
+  "durasi": 1.974
+ },
+ {
+  "berkas": "10_blok2.mp3",
+  "teks": "Yuk, kita buka gemboknya dengan bunyinya.",
+  "mulai_video": 33.5,
+  "kalimat_mulai": 33.56,
+  "kalimat_selesai": 36.09,
+  "durasi": 2.687
+ },
+ {
+  "berkas": "11_blok2.mp3",
+  "teks": "Bunyinya...",
+  "mulai_video": 36.95,
+  "kalimat_mulai": 37.01,
+  "kalimat_selesai": 37.767,
+  "durasi": 0.913
+ },
+ {
+  "berkas": "12_blok2.mp3",
+  "teks": "aaa.",
+  "mulai_video": 38.29,
+  "kalimat_mulai": 38.35,
+  "kalimat_selesai": 39.046,
+  "durasi": 0.852
+ },
+ {
+  "berkas": "13_blok2.mp3",
+  "teks": "Ayo ikuti,",
+  "mulai_video": 39.39,
+  "kalimat_mulai": 39.45,
+  "kalimat_selesai": 40.137,
+  "durasi": 0.843
+ },
+ {
+  "berkas": "14_blok2.mp3",
+  "teks": "aaa.",
+  "mulai_video": 40.76,
+  "kalimat_mulai": 40.82,
+  "kalimat_selesai": 41.472,
+  "durasi": 0.809
+ },
+ {
+  "berkas": "15_blok2.mp3",
+  "teks": "Pintar sekali.",
+  "mulai_video": 45.09,
+  "kalimat_mulai": 45.15,
+  "kalimat_selesai": 46.167,
+  "durasi": 1.174
+ },
+ {
+  "berkas": "16_blok2.mp3",
+  "teks": "Aaa. Yeay, satu kunci.",
+  "mulai_video": 46.77,
+  "kalimat_mulai": 46.83,
+  "kalimat_selesai": 49.717,
+  "durasi": 3.043
+ },
+ {
+  "berkas": "17_blok3.mp3",
+  "teks": "A... apel.",
+  "mulai_video": 55.5,
+  "kalimat_mulai": 55.5,
+  "kalimat_selesai": 56.804,
+  "durasi": 1.409
+ },
+ {
+  "berkas": "18_blok3.mp3",
+  "teks": "A... anggur.",
+  "mulai_video": 67.44,
+  "kalimat_mulai": 67.5,
+  "kalimat_selesai": 68.735,
+  "durasi": 1.391
+ },
+ {
+  "berkas": "19_blok3.mp3",
+  "teks": "A... alpukat.",
+  "mulai_video": 79.44,
+  "kalimat_mulai": 79.5,
+  "kalimat_selesai": 80.778,
+  "durasi": 1.435
+ },
+ {
+  "berkas": "20_blok3.mp3",
+  "teks": "Yeay, dua kunci.",
+  "mulai_video": 88.64,
+  "kalimat_mulai": 88.7,
+  "kalimat_selesai": 90.022,
+  "durasi": 1.478
+ },
+ {
+  "berkas": "21_blok3.mp3",
+  "teks": "Yuk, kita hitung apelnya.",
+  "mulai_video": 90.74,
+  "kalimat_mulai": 90.8,
+  "kalimat_selesai": 92.47,
+  "durasi": 1.826
+ },
+ {
+  "berkas": "22_blok3.mp3",
+  "teks": "Satu... dua... tiga.",
+  "mulai_video": 93.24,
+  "kalimat_mulai": 93.3,
+  "kalimat_selesai": 95.083,
+  "durasi": 1.939
+ },
+ {
+  "berkas": "23_blok3.mp3",
+  "teks": "Ada tiga apel.",
+  "mulai_video": 96.24,
+  "kalimat_mulai": 96.3,
+  "kalimat_selesai": 98.265,
+  "durasi": 2.122
+ },
+ {
+  "berkas": "24_blok4.mp3",
+  "teks": "Gemboknya minta kata sandi, yaitu huruf a.",
+  "mulai_video": 103.0,
+  "kalimat_mulai": 103.0,
+  "kalimat_selesai": 106.939,
+  "durasi": 4.043
+ },
+ {
+  "berkas": "25_blok4.mp3",
+  "teks": "Yuk, kita tulis bersama.",
+  "mulai_video": 107.95,
+  "kalimat_mulai": 108.01,
+  "kalimat_selesai": 109.601,
+  "durasi": 1.748
+ },
+ {
+  "berkas": "26_blok4.mp3",
+  "teks": "Satu: putar membentuk lingkaran.",
+  "mulai_video": 110.3,
+  "kalimat_mulai": 110.36,
+  "kalimat_selesai": 112.951,
+  "durasi": 2.748
+ },
+ {
+  "berkas": "27_blok4.mp3",
+  "teks": "Dua: tarik garis lurus ke bawah.",
+  "mulai_video": 117.34,
+  "kalimat_mulai": 117.4,
+  "kalimat_selesai": 120.078,
+  "durasi": 2.835
+ },
+ {
+  "berkas": "28_blok4.mp3",
+  "teks": "Sekarang kita ulangi, ya.",
+  "mulai_video": 125.34,
+  "kalimat_mulai": 125.4,
+  "kalimat_selesai": 127.191,
+  "durasi": 1.948
+ },
+ {
+  "berkas": "29_blok4.mp3",
+  "teks": "Tulis di udara dengan jari kecilmu.",
+  "mulai_video": 127.95,
+  "kalimat_mulai": 128.01,
+  "kalimat_selesai": 130.471,
+  "durasi": 2.617
+ },
+ {
+  "berkas": "30_blok4.mp3",
+  "teks": "Pintar sekali.",
+  "mulai_video": 137.34,
+  "kalimat_mulai": 137.4,
+  "kalimat_selesai": 138.426,
+  "durasi": 1.183
+ },
+ {
+  "berkas": "31_blok4.mp3",
+  "teks": "Yeay, tiga kunci.",
+  "mulai_video": 138.76,
+  "kalimat_mulai": 138.82,
+  "kalimat_selesai": 140.463,
+  "durasi": 1.8
+ },
+ {
+  "berkas": "32_blok6.mp3",
+  "teks": "Wah, kita sudah punya semua kunci.",
+  "mulai_video": 178.5,
+  "kalimat_mulai": 178.5,
+  "kalimat_selesai": 180.952,
+  "durasi": 2.557
+ },
+ {
+  "berkas": "33_blok6.mp3",
+  "teks": "Yuk, kita buka gemboknya.",
+  "mulai_video": 181.65,
+  "kalimat_mulai": 181.71,
+  "kalimat_selesai": 183.267,
+  "durasi": 1.713
+ },
+ {
+  "berkas": "34_blok6.mp3",
+  "teks": "Tadaa.",
+  "mulai_video": 183.91,
+  "kalimat_mulai": 183.97,
+  "kalimat_selesai": 186.17,
+  "durasi": 2.357
+ },
+ {
+  "berkas": "35_blok6.mp3",
+  "teks": "Ada apel, anggur, dan alpukat.",
+  "mulai_video": 186.78,
+  "kalimat_mulai": 186.84,
+  "kalimat_selesai": 188.527,
+  "durasi": 1.843
+ },
+ {
+  "berkas": "36_blok6.mp3",
+  "teks": "A untuk apel, anggur, alpukat.",
+  "mulai_video": 189.48,
+  "kalimat_mulai": 189.54,
+  "kalimat_selesai": 191.827,
+  "durasi": 2.443
+ },
+ {
+  "berkas": "37_blok6.mp3",
+  "teks": "Hebat, anak-anak soleh dan soleha.",
+  "mulai_video": 192.37,
+  "kalimat_mulai": 192.43,
+  "kalimat_selesai": 196.047,
+  "durasi": 3.774
+ },
+ {
+  "berkas": "38_blok6.mp3",
+  "teks": "Eh, ada keranjang lagi.",
+  "mulai_video": 196.97,
+  "kalimat_mulai": 197.03,
+  "kalimat_selesai": 199.221,
+  "durasi": 2.348
+ },
+ {
+  "berkas": "39_blok6.mp3",
+  "teks": "Tok tok...",
+  "mulai_video": 200.06,
+  "kalimat_mulai": 200.12,
+  "kalimat_selesai": 200.737,
+  "durasi": 0.774
+ },
+ {
+  "berkas": "40_blok6.mp3",
+  "teks": "isinya apa ya?",
+  "mulai_video": 201.49,
+  "kalimat_mulai": 201.55,
+  "kalimat_selesai": 202.593,
+  "durasi": 1.2
+ },
+ {
+  "berkas": "41_blok6.mp3",
+  "teks": "Kita buka nanti, ya.",
+  "mulai_video": 203.22,
+  "kalimat_mulai": 203.28,
+  "kalimat_selesai": 204.637,
+  "durasi": 1.513
+ },
+ {
+  "berkas": "42_blok5.mp3",
+  "teks": "Mana huruf a, ya?",
+  "mulai_video": 145.1,
+  "kalimat_mulai": 145.1,
+  "kalimat_selesai": 146.561,
+  "durasi": 1.565
+ },
+ {
+  "berkas": "43_blok5.mp3",
+  "teks": "Yuk, kita tebak.",
+  "mulai_video": 147.22,
+  "kalimat_mulai": 147.28,
+  "kalimat_selesai": 148.341,
+  "durasi": 1.217
+ },
+ {
+  "berkas": "44_blok5.mp3",
+  "teks": "Betul, ini huruf a.",
+  "mulai_video": 153.94,
+  "kalimat_mulai": 154.0,
+  "kalimat_selesai": 155.991,
+  "durasi": 2.148
+ },
+ {
+  "berkas": "45_blok5.mp3",
+  "teks": "Yeay, empat kunci.",
+  "mulai_video": 156.57,
+  "kalimat_mulai": 156.63,
+  "kalimat_selesai": 158.247,
+  "durasi": 1.774
+ },
+ {
+  "berkas": "46_blok5.mp3",
+  "teks": "Sekali lagi, ya. Mana huruf a?",
+  "mulai_video": 162.14,
+  "kalimat_mulai": 162.2,
+  "kalimat_selesai": 164.409,
+  "durasi": 2.365
+ },
+ {
+  "berkas": "47_blok5.mp3",
+  "teks": "Betul, pintar sekali.",
+  "mulai_video": 171.14,
+  "kalimat_mulai": 171.2,
+  "kalimat_selesai": 172.93,
+  "durasi": 1.887
+ },
+ {
+  "berkas": "48_blok5.mp3",
+  "teks": "Yeay, lima kunci.",
+  "mulai_video": 173.39,
+  "kalimat_mulai": 173.45,
+  "kalimat_selesai": 175.024,
+  "durasi": 1.73
+ }
+]
