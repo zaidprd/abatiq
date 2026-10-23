@@ -168040,6 +168040,469 @@
             }
           },
           {
+            "id": 27029,
+            "name": "Keranjang_depan",
+            "source": {
+              "type": "Footage",
+              "item": 27005
+            },
+            "label": "Lavender",
+            "comment": "",
+            "start_time": 0,
+            "in_point": 0,
+            "out_point": 45722880000000,
+            "stretch": 100.0,
+            "switches": {
+              "video": true,
+              "audio": true,
+              "solo": false,
+              "locked": false,
+              "shy": false,
+              "collapse": false,
+              "quality": "Best",
+              "sampling": "Bilinear",
+              "effects": true,
+              "frame_blend": "Off",
+              "motion_blur": false,
+              "adjustment": false,
+              "three_d": false,
+              "guide": false
+            },
+            "blend_mode": "Normal",
+            "preserve_transparency": false,
+            "track_matte": null,
+            "parent": 17279,
+            "markers": [],
+            "auto_orient": "Off",
+            "props": {
+              "uid": 27030,
+              "match": "layer",
+              "name": "kr5_depan",
+              "kind": {
+                "kind": "Plain"
+              },
+              "enabled": true,
+              "children": [
+                {
+                  "node": "Group",
+                  "uid": 27031,
+                  "match": "masks",
+                  "name": "Masks",
+                  "kind": {
+                    "kind": "Plain"
+                  },
+                  "enabled": true,
+                  "children": []
+                },
+                {
+                  "node": "Group",
+                  "uid": 27032,
+                  "match": "effects",
+                  "name": "Effects",
+                  "kind": {
+                    "kind": "Plain"
+                  },
+                  "enabled": true,
+                  "children": []
+                },
+                {
+                  "node": "Group",
+                  "uid": 27041,
+                  "match": "transform",
+                  "name": "Transform",
+                  "kind": {
+                    "kind": "Plain"
+                  },
+                  "enabled": true,
+                  "children": [
+                    {
+                      "node": "Prop",
+                      "uid": 27033,
+                      "match": "anchor",
+                      "name": "Anchor Point",
+                      "value": {
+                        "t": "Vec3",
+                        "v": [
+                          300.0,
+                          540.0,
+                          0.0
+                        ]
+                      },
+                      "ui": {
+                        "kind": "Point"
+                      },
+                      "spatial": true,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 2,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27034,
+                      "match": "position",
+                      "name": "Position",
+                      "value": {
+                        "t": "Vec3",
+                        "v": [
+                          1660.0,
+                          820.0,
+                          0.0
+                        ]
+                      },
+                      "expr": {
+                        "text": "var x=0;[51.3,63.3,75.3].forEach(function(tl){var d=time-tl;if(d>0&&d<0.8)x+=3*Math.exp(-d*6)*Math.sin(d*20);});[1660+x,820];",
+                        "enabled": true
+                      },
+                      "ui": {
+                        "kind": "Point"
+                      },
+                      "spatial": true,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 2,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27035,
+                      "match": "scale",
+                      "name": "Scale",
+                      "value": {
+                        "t": "Vec3",
+                        "v": [
+                          100.0,
+                          100.0,
+                          100.0
+                        ]
+                      },
+                      "expr": {
+                        "text": "var t=Math.min(1,Math.max(0,(time-40.5)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*55/100;var ed=Math.min(1,Math.max(0,(time-75.6)/0.5));s=s*(1-ed);var b=0;[51.3,63.3,75.3].forEach(function(tl){var d=time-tl;if(d>0&&d<0.7)b+=Math.exp(-d*6)*Math.sin(d*22);});[s*(1+0.05*b),s*(1-0.07*b)];",
+                        "enabled": true
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 2,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27036,
+                      "match": "orientation",
+                      "name": "Orientation",
+                      "value": {
+                        "t": "Vec3",
+                        "v": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ]
+                      },
+                      "ui": {
+                        "kind": "Angle"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": true,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27037,
+                      "match": "rotationX",
+                      "name": "X Rotation",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 0.0
+                      },
+                      "ui": {
+                        "kind": "Angle"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": true,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27038,
+                      "match": "rotationY",
+                      "name": "Y Rotation",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 0.0
+                      },
+                      "ui": {
+                        "kind": "Angle"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": true,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27039,
+                      "match": "rotation",
+                      "name": "Rotation",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 0.0
+                      },
+                      "expr": {
+                        "text": "var r=0;[51.3,63.3,75.3].forEach(function(tl){var d=time-tl;if(d>0&&d<0.8)r+=2.2*Math.exp(-d*5.5)*Math.sin(d*18);});r;",
+                        "enabled": true
+                      },
+                      "ui": {
+                        "kind": "Angle"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27040,
+                      "match": "opacity",
+                      "name": "Opacity",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 100.0
+                      },
+                      "expr": {
+                        "text": "(time>=40.5&&time<85)?100:0;",
+                        "enabled": true
+                      },
+                      "ui": {
+                        "kind": "Slider",
+                        "min": 0.0,
+                        "max": 100.0,
+                        "slider_min": 0.0,
+                        "slider_max": 100.0,
+                        "decimals": 0
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    }
+                  ]
+                },
+                {
+                  "node": "Group",
+                  "uid": 27042,
+                  "match": "materialOptions",
+                  "name": "Material Options",
+                  "kind": {
+                    "kind": "Plain"
+                  },
+                  "enabled": true,
+                  "children": [
+                    {
+                      "node": "Prop",
+                      "uid": 27043,
+                      "match": "castsShadows",
+                      "name": "Casts Shadows",
+                      "value": {
+                        "t": "Enum",
+                        "v": 0
+                      },
+                      "ui": {
+                        "kind": "Popup",
+                        "options": [
+                          "Off",
+                          "On",
+                          "Only"
+                        ]
+                      },
+                      "spatial": false,
+                      "hold_only": true,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27044,
+                      "match": "lightTransmission",
+                      "name": "Light Transmission",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 0.0
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27045,
+                      "match": "acceptsShadows",
+                      "name": "Accepts Shadows",
+                      "value": {
+                        "t": "Enum",
+                        "v": 1
+                      },
+                      "ui": {
+                        "kind": "Popup",
+                        "options": [
+                          "Off",
+                          "On",
+                          "Only"
+                        ]
+                      },
+                      "spatial": false,
+                      "hold_only": true,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27046,
+                      "match": "acceptsLights",
+                      "name": "Accepts Lights",
+                      "value": {
+                        "t": "Bool",
+                        "v": true
+                      },
+                      "ui": {
+                        "kind": "Checkbox"
+                      },
+                      "spatial": false,
+                      "hold_only": true,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27047,
+                      "match": "ambient",
+                      "name": "Ambient",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 100.0
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27048,
+                      "match": "diffuse",
+                      "name": "Diffuse",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 50.0
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27049,
+                      "match": "specularIntensity",
+                      "name": "Specular Intensity",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 50.0
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27050,
+                      "match": "specularShininess",
+                      "name": "Specular Shininess",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 5.0
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    },
+                    {
+                      "node": "Prop",
+                      "uid": 27051,
+                      "match": "metal",
+                      "name": "Metal",
+                      "value": {
+                        "t": "Scalar",
+                        "v": 100.0
+                      },
+                      "ui": {
+                        "kind": "Percent"
+                      },
+                      "spatial": false,
+                      "hold_only": false,
+                      "three_d_only": false,
+                      "two_d_only": false,
+                      "shown_dims": 0,
+                      "static_only": false
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
             "id": 10142,
             "name": "Buah_alpukat",
             "source": {
@@ -168152,7 +168615,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var g=Math.min(1,Math.max(0,(time-74)/1.3));var e=g*g*(3-2*g);var hop=Math.sin(g*Math.PI)*120;[1180+(1660-1180)*e,470+(780-470)*e-hop];",
+                        "text": "var g=Math.min(1,Math.max(0,(time-74)/1.3));var e=g*g*(3-2*g);var ey=Math.pow(g,1.6);var hp=Math.sin(g*Math.PI)*120;function hop(tl,Am){var d=time-tl,y=0;if(d>0&&d<0.4){var u=d/0.4;y=Am*4*u*(1-u);}else if(d>=0.4&&d<0.62){var u=(d-0.4)/0.22;y=Am*0.25*4*u*(1-u);}return y;}function nudge(tl,Am){var d=time-tl;return (d>0&&d<0.5)?Am*Math.exp(-d*7)*Math.sin(d*17):0;}[1180+(1658-1180)*e,470+(684-470)*ey-hp-hop(75.3,15)-(0)];",
                         "enabled": true
                       },
                       "ui": {
@@ -168179,7 +168642,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var t=Math.min(1,Math.max(0,(time-65)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*60/100;var g=Math.min(1,Math.max(0,(time-74)/1.3));var e=g*g*(3-2*g);s=s*(1-0.5*e);[s,s];",
+                        "text": "var t=Math.min(1,Math.max(0,(time-65)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*60/100;var g=Math.min(1,Math.max(0,(time-74)/1.3));var e=g*g*(3-2*g);s=s*(1-0.50*e);var ed=Math.min(1,Math.max(0,(time-75.6)/0.5));s=s*(1-ed);[s,s];",
                         "enabled": true
                       },
                       "ui": {
@@ -168262,6 +168725,10 @@
                         "t": "Scalar",
                         "v": 0.0
                       },
+                      "expr": {
+                        "text": "function roll(tl,Am){var d=time-tl;return (d>0&&d<1.0)?Am*Math.exp(-d*4.5)*Math.sin(d*8):0;}function nudge(tl,Am){var d=time-tl;return (d>0&&d<0.5)?Am*Math.exp(-d*7)*Math.sin(d*15):0;}roll(75.3,8);",
+                        "enabled": true
+                      },
                       "ui": {
                         "kind": "Angle"
                       },
@@ -168282,7 +168749,7 @@
                         "v": 100.0
                       },
                       "expr": {
-                        "text": "(time>=65&&time<75.35)?100:0;",
+                        "text": "(time>=65&&time<76.2)?100:0;",
                         "enabled": true
                       },
                       "ui": {
@@ -170257,7 +170724,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var g=Math.min(1,Math.max(0,(time-62)/1.3));var e=g*g*(3-2*g);var hop=Math.sin(g*Math.PI)*120;[1180+(1660-1180)*e,470+(780-470)*e-hop];",
+                        "text": "var g=Math.min(1,Math.max(0,(time-62)/1.3));var e=g*g*(3-2*g);var ey=Math.pow(g,1.6);var hp=Math.sin(g*Math.PI)*120;function hop(tl,Am){var d=time-tl,y=0;if(d>0&&d<0.4){var u=d/0.4;y=Am*4*u*(1-u);}else if(d>=0.4&&d<0.62){var u=(d-0.4)/0.22;y=Am*0.25*4*u*(1-u);}return y;}function nudge(tl,Am){var d=time-tl;return (d>0&&d<0.5)?Am*Math.exp(-d*7)*Math.sin(d*17):0;}[1180+(1704-1180)*e,470+(722-470)*ey-hp-hop(63.3,11)-(0+nudge(75.3,4))];",
                         "enabled": true
                       },
                       "ui": {
@@ -170284,7 +170751,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var t=Math.min(1,Math.max(0,(time-53)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*60/100;var g=Math.min(1,Math.max(0,(time-62)/1.3));var e=g*g*(3-2*g);s=s*(1-0.5*e);[s,s];",
+                        "text": "var t=Math.min(1,Math.max(0,(time-53)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*60/100;var g=Math.min(1,Math.max(0,(time-62)/1.3));var e=g*g*(3-2*g);s=s*(1-0.50*e);var ed=Math.min(1,Math.max(0,(time-75.6)/0.5));s=s*(1-ed);[s,s];",
                         "enabled": true
                       },
                       "ui": {
@@ -170367,6 +170834,10 @@
                         "t": "Scalar",
                         "v": 0.0
                       },
+                      "expr": {
+                        "text": "function roll(tl,Am){var d=time-tl;return (d>0&&d<1.0)?Am*Math.exp(-d*4.5)*Math.sin(d*8):0;}function nudge(tl,Am){var d=time-tl;return (d>0&&d<0.5)?Am*Math.exp(-d*7)*Math.sin(d*15):0;}roll(63.3,-6)+nudge(75.3,2.5);",
+                        "enabled": true
+                      },
                       "ui": {
                         "kind": "Angle"
                       },
@@ -170387,7 +170858,7 @@
                         "v": 100.0
                       },
                       "expr": {
-                        "text": "(time>=53&&time<63.35)?100:0;",
+                        "text": "(time>=53&&time<76.2)?100:0;",
                         "enabled": true
                       },
                       "ui": {
@@ -172362,7 +172833,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var g=Math.min(1,Math.max(0,(time-50)/1.3));var e=g*g*(3-2*g);var hop=Math.sin(g*Math.PI)*120;[1180+(1660-1180)*e,470+(780-470)*e-hop];",
+                        "text": "var g=Math.min(1,Math.max(0,(time-50)/1.3));var e=g*g*(3-2*g);var ey=Math.pow(g,1.6);var hp=Math.sin(g*Math.PI)*120;function hop(tl,Am){var d=time-tl,y=0;if(d>0&&d<0.4){var u=d/0.4;y=Am*4*u*(1-u);}else if(d>=0.4&&d<0.62){var u=(d-0.4)/0.22;y=Am*0.25*4*u*(1-u);}return y;}function nudge(tl,Am){var d=time-tl;return (d>0&&d<0.5)?Am*Math.exp(-d*7)*Math.sin(d*17):0;}[1180+(1608-1180)*e,470+(748-470)*ey-hp-hop(51.3,5)-(0+nudge(63.3,4)+nudge(75.3,4))];",
                         "enabled": true
                       },
                       "ui": {
@@ -172389,7 +172860,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var t=Math.min(1,Math.max(0,(time-41)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*60/100;var g=Math.min(1,Math.max(0,(time-50)/1.3));var e=g*g*(3-2*g);s=s*(1-0.5*e);[s,s];",
+                        "text": "var t=Math.min(1,Math.max(0,(time-41)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*60/100;var g=Math.min(1,Math.max(0,(time-50)/1.3));var e=g*g*(3-2*g);s=s*(1-0.50*e);var ed=Math.min(1,Math.max(0,(time-75.6)/0.5));s=s*(1-ed);[s,s];",
                         "enabled": true
                       },
                       "ui": {
@@ -172472,6 +172943,10 @@
                         "t": "Scalar",
                         "v": 0.0
                       },
+                      "expr": {
+                        "text": "function roll(tl,Am){var d=time-tl;return (d>0&&d<1.0)?Am*Math.exp(-d*4.5)*Math.sin(d*8):0;}function nudge(tl,Am){var d=time-tl;return (d>0&&d<0.5)?Am*Math.exp(-d*7)*Math.sin(d*15):0;}roll(51.3,5)+nudge(63.3,2.5)+nudge(75.3,2.5);",
+                        "enabled": true
+                      },
                       "ui": {
                         "kind": "Angle"
                       },
@@ -172492,7 +172967,7 @@
                         "v": 100.0
                       },
                       "expr": {
-                        "text": "(time>=41&&time<51.35)?100:0;",
+                        "text": "(time>=41&&time<76.2)?100:0;",
                         "enabled": true
                       },
                       "ui": {
@@ -172709,11 +173184,11 @@
             }
           },
           {
-            "id": 9917,
-            "name": "Keranjang",
+            "id": 27006,
+            "name": "Keranjang_belakang",
             "source": {
               "type": "Footage",
-              "item": 9913
+              "item": 27004
             },
             "label": "Lavender",
             "comment": "",
@@ -172744,9 +173219,9 @@
             "markers": [],
             "auto_orient": "Off",
             "props": {
-              "uid": 9918,
+              "uid": 27007,
               "match": "layer",
-              "name": "o_keranjang",
+              "name": "kr5_belakang",
               "kind": {
                 "kind": "Plain"
               },
@@ -172754,7 +173229,7 @@
               "children": [
                 {
                   "node": "Group",
-                  "uid": 9919,
+                  "uid": 27008,
                   "match": "masks",
                   "name": "Masks",
                   "kind": {
@@ -172765,7 +173240,7 @@
                 },
                 {
                   "node": "Group",
-                  "uid": 9920,
+                  "uid": 27009,
                   "match": "effects",
                   "name": "Effects",
                   "kind": {
@@ -172776,7 +173251,7 @@
                 },
                 {
                   "node": "Group",
-                  "uid": 9929,
+                  "uid": 27018,
                   "match": "transform",
                   "name": "Transform",
                   "kind": {
@@ -172786,7 +173261,7 @@
                   "children": [
                     {
                       "node": "Prop",
-                      "uid": 9921,
+                      "uid": 27010,
                       "match": "anchor",
                       "name": "Anchor Point",
                       "value": {
@@ -172809,7 +173284,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9922,
+                      "uid": 27011,
                       "match": "position",
                       "name": "Position",
                       "value": {
@@ -172819,6 +173294,10 @@
                           820.0,
                           0.0
                         ]
+                      },
+                      "expr": {
+                        "text": "var x=0;[51.3,63.3,75.3].forEach(function(tl){var d=time-tl;if(d>0&&d<0.8)x+=3*Math.exp(-d*6)*Math.sin(d*20);});[1660+x,820];",
+                        "enabled": true
                       },
                       "ui": {
                         "kind": "Point"
@@ -172832,7 +173311,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9923,
+                      "uid": 27012,
                       "match": "scale",
                       "name": "Scale",
                       "value": {
@@ -172844,7 +173323,7 @@
                         ]
                       },
                       "expr": {
-                        "text": "var t=Math.min(1,Math.max(0,(time-40.5)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*55/100;var ed=Math.min(1,Math.max(0,(time-75.6)/0.5));s=s*(1-ed);[s,s];",
+                        "text": "var t=Math.min(1,Math.max(0,(time-40.5)/0.4));var s=t<0.6?(t/0.6)*115:115-(t-0.6)/0.4*15;s=s*55/100;var ed=Math.min(1,Math.max(0,(time-75.6)/0.5));s=s*(1-ed);var b=0;[51.3,63.3,75.3].forEach(function(tl){var d=time-tl;if(d>0&&d<0.7)b+=Math.exp(-d*6)*Math.sin(d*22);});[s*(1+0.05*b),s*(1-0.07*b)];",
                         "enabled": true
                       },
                       "ui": {
@@ -172859,7 +173338,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9924,
+                      "uid": 27013,
                       "match": "orientation",
                       "name": "Orientation",
                       "value": {
@@ -172882,7 +173361,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9925,
+                      "uid": 27014,
                       "match": "rotationX",
                       "name": "X Rotation",
                       "value": {
@@ -172901,7 +173380,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9926,
+                      "uid": 27015,
                       "match": "rotationY",
                       "name": "Y Rotation",
                       "value": {
@@ -172920,12 +173399,16 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9927,
+                      "uid": 27016,
                       "match": "rotation",
                       "name": "Rotation",
                       "value": {
                         "t": "Scalar",
                         "v": 0.0
+                      },
+                      "expr": {
+                        "text": "var r=0;[51.3,63.3,75.3].forEach(function(tl){var d=time-tl;if(d>0&&d<0.8)r+=2.2*Math.exp(-d*5.5)*Math.sin(d*18);});r;",
+                        "enabled": true
                       },
                       "ui": {
                         "kind": "Angle"
@@ -172939,7 +173422,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9928,
+                      "uid": 27017,
                       "match": "opacity",
                       "name": "Opacity",
                       "value": {
@@ -172969,7 +173452,7 @@
                 },
                 {
                   "node": "Group",
-                  "uid": 9930,
+                  "uid": 27019,
                   "match": "materialOptions",
                   "name": "Material Options",
                   "kind": {
@@ -172979,7 +173462,7 @@
                   "children": [
                     {
                       "node": "Prop",
-                      "uid": 9931,
+                      "uid": 27020,
                       "match": "castsShadows",
                       "name": "Casts Shadows",
                       "value": {
@@ -173003,7 +173486,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9932,
+                      "uid": 27021,
                       "match": "lightTransmission",
                       "name": "Light Transmission",
                       "value": {
@@ -173022,7 +173505,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9933,
+                      "uid": 27022,
                       "match": "acceptsShadows",
                       "name": "Accepts Shadows",
                       "value": {
@@ -173046,7 +173529,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9934,
+                      "uid": 27023,
                       "match": "acceptsLights",
                       "name": "Accepts Lights",
                       "value": {
@@ -173065,7 +173548,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9935,
+                      "uid": 27024,
                       "match": "ambient",
                       "name": "Ambient",
                       "value": {
@@ -173084,7 +173567,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9936,
+                      "uid": 27025,
                       "match": "diffuse",
                       "name": "Diffuse",
                       "value": {
@@ -173103,7 +173586,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9937,
+                      "uid": 27026,
                       "match": "specularIntensity",
                       "name": "Specular Intensity",
                       "value": {
@@ -173122,7 +173605,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9938,
+                      "uid": 27027,
                       "match": "specularShininess",
                       "name": "Specular Shininess",
                       "value": {
@@ -173141,7 +173624,7 @@
                     },
                     {
                       "node": "Prop",
-                      "uid": 9939,
+                      "uid": 27028,
                       "match": "metal",
                       "name": "Metal",
                       "value": {
@@ -327071,9 +327554,201 @@
         "codec": "MP3",
         "missing": false
       }
+    },
+    "26908": {
+      "id": 26908,
+      "name": "kr3_belakang",
+      "label": "Lavender",
+      "comment": "",
+      "parent": null,
+      "kind": {
+        "type": "Footage",
+        "path": "E:/latihan/AE/aset/objek_datar/kr3_belakang.png",
+        "kind": "Still",
+        "width": 600,
+        "height": 600,
+        "pixel_aspect": 1.0,
+        "frame_rate": {
+          "num": 30,
+          "den": 1
+        },
+        "native_rate": null,
+        "duration": 0,
+        "has_video": true,
+        "has_audio": false,
+        "alpha": "Straight",
+        "premul_color": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loop_count": 1,
+        "codec": "PNG",
+        "missing": false
+      }
+    },
+    "26909": {
+      "id": 26909,
+      "name": "kr3_depan",
+      "label": "Lavender",
+      "comment": "",
+      "parent": null,
+      "kind": {
+        "type": "Footage",
+        "path": "E:/latihan/AE/aset/objek_datar/kr3_depan.png",
+        "kind": "Still",
+        "width": 600,
+        "height": 600,
+        "pixel_aspect": 1.0,
+        "frame_rate": {
+          "num": 30,
+          "den": 1
+        },
+        "native_rate": null,
+        "duration": 0,
+        "has_video": true,
+        "has_audio": false,
+        "alpha": "Straight",
+        "premul_color": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loop_count": 1,
+        "codec": "PNG",
+        "missing": false
+      }
+    },
+    "26956": {
+      "id": 26956,
+      "name": "kr4_belakang",
+      "label": "Lavender",
+      "comment": "",
+      "parent": null,
+      "kind": {
+        "type": "Footage",
+        "path": "E:/latihan/AE/aset/objek_datar/kr4_belakang.png",
+        "kind": "Still",
+        "width": 600,
+        "height": 600,
+        "pixel_aspect": 1.0,
+        "frame_rate": {
+          "num": 30,
+          "den": 1
+        },
+        "native_rate": null,
+        "duration": 0,
+        "has_video": true,
+        "has_audio": false,
+        "alpha": "Straight",
+        "premul_color": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loop_count": 1,
+        "codec": "PNG",
+        "missing": false
+      }
+    },
+    "26957": {
+      "id": 26957,
+      "name": "kr4_depan",
+      "label": "Lavender",
+      "comment": "",
+      "parent": null,
+      "kind": {
+        "type": "Footage",
+        "path": "E:/latihan/AE/aset/objek_datar/kr4_depan.png",
+        "kind": "Still",
+        "width": 600,
+        "height": 600,
+        "pixel_aspect": 1.0,
+        "frame_rate": {
+          "num": 30,
+          "den": 1
+        },
+        "native_rate": null,
+        "duration": 0,
+        "has_video": true,
+        "has_audio": false,
+        "alpha": "Straight",
+        "premul_color": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loop_count": 1,
+        "codec": "PNG",
+        "missing": false
+      }
+    },
+    "27004": {
+      "id": 27004,
+      "name": "kr5_belakang",
+      "label": "Lavender",
+      "comment": "",
+      "parent": null,
+      "kind": {
+        "type": "Footage",
+        "path": "E:/latihan/AE/aset/objek_datar/kr5_belakang.png",
+        "kind": "Still",
+        "width": 600,
+        "height": 600,
+        "pixel_aspect": 1.0,
+        "frame_rate": {
+          "num": 30,
+          "den": 1
+        },
+        "native_rate": null,
+        "duration": 0,
+        "has_video": true,
+        "has_audio": false,
+        "alpha": "Straight",
+        "premul_color": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loop_count": 1,
+        "codec": "PNG",
+        "missing": false
+      }
+    },
+    "27005": {
+      "id": 27005,
+      "name": "kr5_depan",
+      "label": "Lavender",
+      "comment": "",
+      "parent": null,
+      "kind": {
+        "type": "Footage",
+        "path": "E:/latihan/AE/aset/objek_datar/kr5_depan.png",
+        "kind": "Still",
+        "width": 600,
+        "height": 600,
+        "pixel_aspect": 1.0,
+        "frame_rate": {
+          "num": 30,
+          "den": 1
+        },
+        "native_rate": null,
+        "duration": 0,
+        "has_video": true,
+        "has_audio": false,
+        "alpha": "Straight",
+        "premul_color": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loop_count": 1,
+        "codec": "PNG",
+        "missing": false
+      }
     }
   },
-  "next_id": 26908,
+  "next_id": 27052,
   "render_queue": [
     {
       "id": 1,
